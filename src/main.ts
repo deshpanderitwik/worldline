@@ -4,6 +4,7 @@ import renderMathInElement from "katex/contrib/auto-render";
 import "./style.css";
 import { homeHTML } from "./home.ts";
 import { equations, type Equation } from "./equations.ts";
+import { initWaveSim } from "./wave-sim.ts";
 
 const app = document.getElementById("app")!;
 
@@ -272,12 +273,16 @@ const renderDetail = (path: string[]) => {
   }
 
   // Auto-render inline math everywhere in the detail (including the title,
-  // which can contain $...$ — e.g. "The size of $W$")
+  // which can contain $...$ — e.g. "The size of $W$") AND the breadcrumb,
+  // whose crumb labels can also carry math (e.g. "Why $k_B$ and N_A...")
   const article = document.querySelector(".detail") as HTMLElement;
+  const breadcrumb = document.querySelector(".breadcrumb") as HTMLElement | null;
   renderProse(article);
+  if (breadcrumb) renderProse(breadcrumb);
 
   // Keep trailing punctuation glued to inline math so it never wraps alone
   gluePunctuationToMath(article);
+  if (breadcrumb) gluePunctuationToMath(breadcrumb);
 
   // Rewrite inline cross-references so they extend the current breadcrumb path
   const body = document.querySelector(".detail-body") as HTMLElement;
@@ -292,6 +297,10 @@ const renderDetail = (path: string[]) => {
   attachEqLinkTooltips(article);
   attachInlineTooltips(article);
   attachAutoTooltips(article);
+
+  // Interactive widgets (any detail page can declare one)
+  const waveSimRoot = document.getElementById("wave-sim");
+  if (waveSimRoot) initWaveSim(waveSimRoot);
 
   window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
 };

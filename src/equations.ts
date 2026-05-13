@@ -587,16 +587,112 @@ export const equations: Record<string, Equation> = {
   a joule shouts.
 </p>
 
-<h3>Why &ldquo;reversible&rdquo;?</h3>
+<h3>Unpacking the words</h3>
 <p>
-  Real processes generate entropy beyond the heat transfer itself
-  &mdash; friction, sudden expansions, mixing, anything irreversible
-  contributes. Clausius's equation captures only the entropy change
-  <em>associated with the heat flow</em>, in the cleanest possible case:
-  the idealized limit where the system stays in equilibrium throughout.
+  The phrase &ldquo;infinitesimal heat exchange along a reversible
+  path&rdquo; is carrying serious technical content. Let&rsquo;s take
+  it apart.
+</p>
+
+<p>
+  <em>&ldquo;Heat exchange&rdquo;</em> is the easiest. It means energy
+  flowing in or out of a system as heat (as opposed to as work).
+  Usually written $\\delta Q$ or $dQ$. A hot stove transferring energy
+  to a pot of water is heat exchange. Nothing fancy.
+</p>
+
+<p>
+  <em>&ldquo;Infinitesimal&rdquo;</em> means vanishingly small &mdash;
+  a single mathematical sliver of heat, not a finite chunk. The
+  notation $\\delta Q$ means &ldquo;the tiny bit of heat exchanged
+  during a tiny step of the process.&rdquo;
 </p>
 <p>
-  For any real process, the actual entropy change is <em>greater</em>:
+  Why does it matter? Because when you change a system&rsquo;s
+  temperature, the system&rsquo;s properties (like its capacity to
+  absorb heat at a given temperature) change continuously along the
+  way. If you dump a finite amount of heat in all at once, the
+  temperature, pressure, and so on swing across a range, and you
+  can&rsquo;t cleanly say &ldquo;this much heat was added at
+  <em>this</em> temperature.&rdquo; But if you imagine the heating as
+  a sequence of infinitely many infinitesimal steps, each step
+  happens at a definite temperature, and you can do calculus on the
+  process. The infinitesimal is the language of &ldquo;every moment
+  of the process has well-defined state variables.&rdquo;
+</p>
+
+<p>
+  <em>&ldquo;Reversible path&rdquo;</em> is the deep one, and it is
+  <em>not</em> the same as &ldquo;can be undone.&rdquo; That is the
+  crucial misreading.
+</p>
+<p>
+  A reversible process is one carried out so slowly, and so gently,
+  that the system is in thermodynamic equilibrium at every moment
+  along the way. Practically:
+</p>
+<ul>
+  <li>Temperature differences between system and surroundings are
+    infinitesimal at every step (no big gradient causing rapid heat
+    flow).</li>
+  <li>Pressure differences are infinitesimal (no rushing of gas).</li>
+  <li>No friction, no turbulence, no rapid mixing.</li>
+  <li>The process could be reversed by an infinitesimal change in
+    conditions, with no net dissipation.</li>
+</ul>
+<p>
+  The hallmark of reversibility is that running the process backward
+  returns both the system <em>and</em> the surroundings to their
+  original states, with zero net change anywhere in the universe. No
+  entropy is generated.
+</p>
+
+<p>
+  <em>The classic non-reversible example.</em> Take a cold mug and put
+  it on a hot stove. Heat flows from stove to mug; the mug warms up.
+  Now move the mug to a cold freezer &mdash; it cools back down to
+  where it started. The mug has been &ldquo;warmed and cooled.&rdquo;
+  But the process was <em>not</em> reversible, because:
+</p>
+<ul>
+  <li>The hot stove lost some energy that ended up partly heating the
+    room.</li>
+  <li>The freezer had to do work (electricity) to dump the mug&rsquo;s
+    heat to its surroundings.</li>
+  <li>The total entropy of the universe went up.</li>
+</ul>
+<p>
+  If you tried to run the whole sequence backward &mdash; heat
+  spontaneously flowing from cold freezer back into stove, room
+  cooling down, electricity flowing back into the grid &mdash; it
+  would violate the Second Law. The mug ended up where it started,
+  but the universe did not.
+</p>
+<p>
+  A truly reversible heating would require the stove to be only
+  infinitesimally warmer than the mug at every instant &mdash; say,
+  $0.000001^\\circ$C warmer &mdash; so that the heat transfer happens
+  with no temperature gradient, no rushing, no waste. The cooling
+  would require a cold reservoir only infinitesimally cooler than the
+  mug. The whole process would take infinitely long.
+</p>
+
+<p class="callout">
+  Reversible processes do not exist in reality. They are an idealized
+  limit.
+</p>
+
+<p>
+  <em>So why do physicists use the concept?</em> Because it lets you
+  define quantities cleanly. The subscript &ldquo;rev&rdquo; in
+  Clausius&rsquo;s formula is doing serious work: only along a
+  reversible path is the ratio $\\delta Q / \\Theta$ a clean
+  differential of a state function (entropy). Along an irreversible
+  path, you would get the wrong answer &mdash; too small, in fact.
+</p>
+<p>
+  For real (irreversible) processes, the actual entropy change is
+  <em>greater</em>:
 </p>
 
 <div class="math-tip" data-tip="second-law-inequality">
@@ -606,10 +702,46 @@ $$dS \\;\\geq\\; \\frac{dQ}{\\Theta}$$
 </div>
 
 <p>
-  This inequality is what gives the Second Law its bite. The reversible
-  limit is the floor; reality always overshoots. Equality is an
-  unreachable ideal; every real exchange leaks more entropy than the
-  formula predicts.
+  Equality is an unreachable ideal; every real exchange leaks more
+  entropy than the formula predicts. This inequality is what gives
+  the Second Law its bite.
+</p>
+<p>
+  Reversibility is not a description of real processes; it is a
+  <em>measurement protocol</em> for defining quantities that do not
+  depend on the path you took. Once you have defined entropy along an
+  imagined reversible path between two states, you can use that value
+  for <em>any</em> process between those states, reversible or not
+  &mdash; because entropy is a state function.
+</p>
+
+<p>
+  <em>A useful analogy.</em> Think of reversible processes the way
+  you would think of frictionless surfaces in mechanics. No real
+  surface is frictionless, but the concept lets you write clean
+  equations like $F = ma$ without endless correction terms. Once you
+  have done the analysis in the idealized world, you can layer
+  real-world dissipation back on top. Reversibility plays the same
+  role in thermodynamics &mdash; it is the frictionless limit that
+  makes the math tractable.
+</p>
+
+<p>
+  <em>Putting the whole phrase together.</em>
+  &ldquo;Infinitesimal heat exchange along a reversible path&rdquo;
+  means: the tiny bit of heat $\\delta Q$ that flows into a system
+  during one infinitesimal step of a process that is being carried
+  out quasi-statically, in equilibrium throughout, with no entropy
+  generation. It is the idealized scenario where you can divide
+  $\\delta Q$ by the system&rsquo;s temperature $\\Theta$ and get a
+  meaningful $dS$ &mdash; the building block of entropy.
+</p>
+
+<p class="callout">
+  Reversibility is specifically about the manner of the warming and
+  cooling &mdash; slow enough, gentle enough, and
+  equilibrium-preserving enough that the universe would not notice if
+  you ran the movie backward.
 </p>
 
 <h3>The historical move</h3>
@@ -897,6 +1029,643 @@ $$k_B \\;\\approx\\; 1.381 \\times 10^{-23} \\;\\text{J/K}$$
         "The two great bookkeeping quantities. Energy is conserved; entropy is created. One symmetric in time, the other not.",
     },
   },
+  boundary: {
+    id: "boundary",
+    tex: "\\partial i \\;\\subset\\; w",
+    tooltip: {
+      pronunciation: "boundary of i is a subset of w",
+      symbols:
+        "$\\partial i$ is the boundary of $i$ (topological notation, borrowed); $\\subset$ is set inclusion; $w$ is the world.",
+      context:
+        "The surface across which $i$ exchanges matter, energy, and information with the rest of $w$. The notation $\\partial$ comes from topology, where it denotes the boundary of a region.",
+    },
+  },
+  "boundary-dynamic": {
+    id: "boundary-dynamic",
+    tex: "\\partial i \\;=\\; \\partial i(t, \\, \\text{context})",
+    tooltip: {
+      pronunciation:
+        "boundary of i is a function of time and context",
+      symbols:
+        "$\\partial i(t, \\text{context})$ &mdash; the boundary as a function of the current moment and the current coupling.",
+      context:
+        "Unlike a body&rsquo;s anatomical surface, $i$&rsquo;s operational boundary deforms with what $i$ is presently engaged with. A drum, a steering wheel, a piano key &mdash; each shifts the effective boundary outward while the body itself stays put.",
+    },
+  },
+  "wave-speed-eqn": {
+    id: "wave-speed-eqn",
+    tex: "v \\;=\\; \\sqrt{\\frac{K}{\\rho}}",
+    tooltip: {
+      pronunciation: "v equals the square root of K over rho",
+      symbols:
+        "$v$ is the wave speed; $K$ is an elastic modulus (stiffness, in pascals); $\\rho$ is density (mass per unit volume, in kg/m³).",
+      context:
+        "The propagation speed of a pressure wave in a medium. Stiffer media transmit faster; denser media transmit slower. The square root comes from the wave equation, which is second-order in time and space.",
+    },
+  },
+  "wave-speed-sim": {
+    id: "wave-speed-sim",
+    detail: {
+      title: "Play with $v = \\sqrt{K/\\rho}$",
+      html: `
+<p class="lead">
+  Dial in the stiffness $K$ and the density $\\rho$, then click
+  anywhere on the chain to send a pulse. Watch how fast the
+  disturbance ripples through. The readout shows the live value of
+  $v = \\sqrt{K/\\rho}$.
+</p>
+
+<h3>What you&rsquo;re looking at</h3>
+<p>
+  The <strong>circles are particles</strong> &mdash; small chunks
+  of matter that make up the medium (atoms, molecules, or any mass
+  element). The <strong>lines between them are springs</strong>,
+  representing the bonds and intermolecular forces that resist
+  compression.
+</p>
+<dl>
+  <dt>Stiffness $K$ &mdash; the spring strength.</dt>
+  <dd>
+    How strongly each spring pushes back when squeezed. Higher $K$
+    &mdash; <em>thicker</em> connecting lines, stronger restoring
+    force. In a real material this is set by bond strength.
+  </dd>
+  <dt>Density $\\rho$ &mdash; the mass of each particle.</dt>
+  <dd>
+    How heavy each individual circle is. Higher $\\rho$ &mdash;
+    <em>bigger</em>, heavier circles, each more reluctant to
+    accelerate. <em>Not</em> the number of particles, and
+    <em>not</em> their spacing &mdash; just how massive each one
+    is. In a real material this is set by atomic mass and packing.
+  </dd>
+</dl>
+<p>
+  So when you drag the sliders, watch the circles get bigger
+  ($\\rho$ up) or the springs get thicker ($K$ up) before you send
+  a pulse. Then send a pulse and watch the wave speed change.
+</p>
+
+<div class="wave-sim" id="wave-sim">
+  <canvas class="wave-sim__canvas" aria-label="Mass-spring chain showing pressure-wave propagation"></canvas>
+
+  <div class="wave-sim__controls">
+    <label class="wave-sim__control">
+      <input
+        type="range"
+        class="wave-sim__k"
+        min="5"
+        max="200"
+        value="50"
+        step="1"
+      />
+      <span class="wave-sim__caption">
+        <span class="wave-sim__label">Stiffness $K$</span>
+        <span class="wave-sim__value wave-sim__k-value">50</span>
+      </span>
+    </label>
+
+    <label class="wave-sim__control">
+      <input
+        type="range"
+        class="wave-sim__rho"
+        min="1"
+        max="50"
+        value="10"
+        step="1"
+      />
+      <span class="wave-sim__caption">
+        <span class="wave-sim__label">Density $\\rho$</span>
+        <span class="wave-sim__value wave-sim__rho-value">10</span>
+      </span>
+    </label>
+
+    <div class="wave-sim__readout">
+      $v = \\sqrt{K/\\rho} =$
+      <span class="wave-sim__v-value">2.24</span>
+    </div>
+
+    <button type="button" class="wave-sim__reset">Reset</button>
+  </div>
+</div>
+
+<h3>Things to try</h3>
+<dl>
+  <dt>Make it stiff. Click anywhere on the chain.</dt>
+  <dd>
+    Drag $K$ up. The pulse rips across the chain. Stiff springs
+    snap back hard, pushing the next mass quickly, which pushes the
+    next, and so on. <em>Stiffer &rArr; faster.</em> Use the
+    <em>Reset</em> button to clear the chain between experiments.
+  </dd>
+  <dt>Make it heavy.</dt>
+  <dd>
+    Now drag $\\rho$ up. The pulse slows to a crawl. Each mass
+    needs more force to accelerate, so each step of the relay
+    takes longer. <em>Heavier &rArr; slower.</em>
+  </dd>
+  <dt>Hold their ratio constant.</dt>
+  <dd>
+    Try $(K, \\rho) = (50, 10)$ then $(100, 20)$ then $(200, 40)$.
+    The pulse speed doesn&rsquo;t change &mdash; both top and
+    bottom of the ratio scale by the same factor. The formula
+    cares about the <em>ratio</em>, not the absolute values.
+  </dd>
+  <dt>Click in the middle.</dt>
+  <dd>
+    Click somewhere inside the chain. The pulse splits and
+    propagates outward in both directions. That&rsquo;s sound from
+    a clap or a struck drum &mdash; energy radiating away from a
+    localized disturbance.
+  </dd>
+  <dt>Click many times.</dt>
+  <dd>
+    Send several pulses in succession. They pass through each
+    other roughly intact &mdash; that is the superposition
+    principle, the same reason multiple people can speak at once
+    and still be heard separately.
+  </dd>
+</dl>
+
+<h3>A word on &ldquo;stiff&rdquo;</h3>
+<p>
+  Watching the sim, you may notice something that clashes with the
+  everyday sense of the word: at high stiffness $K$ the particles
+  move <em>more</em>, not less. Stiff things in daily life are
+  supposed to <em>resist</em> movement. So which is it?
+</p>
+<p>
+  Both, actually. They are the same fact viewed from two sides.
+</p>
+<dl>
+  <dt>Everyday &ldquo;stiff&rdquo; &mdash; doesn&rsquo;t yield.</dt>
+  <dd>
+    A stiff door is hard to push. A stiff piece of cardboard does
+    not bend. Stiff things <em>don&rsquo;t move much</em> when
+    pushed.
+  </dd>
+  <dt>Wave-physics &ldquo;stiff&rdquo; &mdash; strong bonds, transmits force well.</dt>
+  <dd>
+    $K$ is the spring constant: a stiff spring is one that pushes
+    back <em>hard</em> when compressed. It has a strong restoring
+    force per unit displacement.
+  </dd>
+</dl>
+<p>
+  These sound opposite, but the underlying physics is identical:
+  <em>strong bonds</em>. The two everyday senses arise from where
+  you push and what you watch:
+</p>
+<ul>
+  <li>
+    Push on the <strong>whole rigid object</strong> (a steel beam)
+    and it does not visibly deform &mdash; the strong bonds hold the
+    atoms in near-rigid lockstep, so the whole beam moves as a unit.
+  </li>
+  <li>
+    Push on <strong>one atom inside</strong> a stiff medium (what
+    our sim does) and the strong bonds yank the neighbours along
+    forcefully. The disturbance ripples outward strongly and fast.
+  </li>
+</ul>
+
+<p class="callout">
+  Stiff materials are stiff <em>precisely because</em> their atoms
+  are tightly coupled. That tight coupling is exactly what makes
+  waves move quickly and forcefully through them.
+</p>
+
+<p>
+  Steel is stiff: sound in steel travels at $\\sim 5000$ m/s, with
+  each atom jiggling its neighbour hard. Rubber is soft: sound in
+  rubber travels at $\\sim 50$ m/s, with each lump barely nudging
+  the next. Same word, two visual effects, one underlying fact.
+</p>
+
+<p class="aside-detail">
+  The masses are coloured by displacement: rust where displaced,
+  ink-white at rest. Watch the wave as a band of colour
+  travelling through. The simulation runs the same physics
+  derived in the parent page &mdash; Newton&rsquo;s second law on
+  each mass, Hooke&rsquo;s spring force at each joint. The
+  $\\sqrt{K/\\rho}$ behaviour is not imposed; it emerges.
+</p>
+`,
+    },
+  },
+  "newton-second-law": {
+    id: "newton-second-law",
+    tex: "F \\;=\\; m \\, a",
+    tooltip: {
+      pronunciation: "F equals m a",
+      symbols:
+        "$F$ is the net force on an object; $m$ is its mass; $a$ is the resulting acceleration.",
+      context:
+        "Newton&rsquo;s second law of motion. The bedrock equation of classical mechanics: the force on something equals its mass times the acceleration that force produces.",
+    },
+  },
+  "hookes-law": {
+    id: "hookes-law",
+    tex: "F \\;=\\; -K x",
+    tooltip: {
+      pronunciation: "F equals minus K x",
+      symbols:
+        "$F$ is the restoring force; $K$ is the spring constant (stiffness); $x$ is the displacement from rest. The minus sign means the force opposes the displacement.",
+      context:
+        "Hooke&rsquo;s law. A spring (or any elastic medium under small deformations) pushes back proportionally to how far it has been displaced. The constant $K$ measures how stiffly it pushes.",
+    },
+  },
+  sensorium: {
+    id: "sensorium",
+    tex: "\\sigma_i \\;\\subset\\; \\partial i",
+    tooltip: {
+      pronunciation:
+        "sigma sub i is a subset of the boundary of i",
+      symbols:
+        "$\\sigma_i$ is $i$&rsquo;s sensorium &mdash; the set of channels by which $w$ reaches $i$; $\\subset$ is set inclusion; $\\partial i$ is the boundary.",
+      context:
+        "The sensorium lives in the boundary &mdash; it is the inward-facing side of $\\partial i$, where signals from $w$ become signals inside $i$. Retina, cochlea, taste buds, skin receptors are all parts of $\\sigma_i$.",
+    },
+  },
+  simulation: {
+    id: "simulation",
+    tex: "\\mathcal{S}_i \\;\\subset\\; i",
+    tooltip: {
+      pronunciation: "S-script sub i is a subset of i",
+      symbols:
+        "$\\mathcal{S}_i$ is the simulation &mdash; $i$&rsquo;s internal model of $w$; $\\subset$ is set inclusion; $i$ is the questioner&rsquo;s worldline.",
+      context:
+        "The simulation is a definite component of $i$ &mdash; the running internal model of $w$ that generates predictions, memories, imaginings, and narratives. Not the whole of $i$, just one stratum. Distinct from the entropy $S$ (italic, not script) and the sensorium $\\sigma_i$ (lowercase Greek).",
+    },
+  },
+  "prediction-error": {
+    id: "prediction-error",
+    tex: "\\varepsilon_i \\;=\\; \\sigma_i \\,-\\, \\mathcal{S}_i",
+    tooltip: {
+      pronunciation:
+        "epsilon sub i equals sigma sub i minus S-script sub i",
+      symbols:
+        "$\\varepsilon_i$ is the prediction error of $i$; $\\sigma_i$ is what the sensorium actually delivers; $\\mathcal{S}_i$ is what the simulation predicted.",
+      context:
+        "The difference between what was predicted and what arrived. The brain mostly transmits this error term upward; the simulation predicts $w$, the sensorium provides a correction, and only the surprise enters awareness as fresh information.",
+    },
+  },
+  "simulation-decomposition": {
+    id: "simulation-decomposition",
+    tex: "\\mathcal{S}_i \\;=\\; \\mathcal{P}_i \\,\\cup\\, \\mathcal{A}_i",
+    tooltip: {
+      pronunciation:
+        "S-script sub i equals P-script sub i union A-script sub i",
+      symbols:
+        "$\\mathcal{S}_i$ is the simulation; $\\mathcal{P}_i$ is the endogenous percepts; $\\mathcal{A}_i$ is the abstract operations; $\\cup$ is set union.",
+      context:
+        "The simulation decomposes into two branches: $\\mathcal{P}_i$ (perceptual machinery running internally &mdash; memory replay, fantasy, mental imagery) and $\\mathcal{A}_i$ (symbolic and relational machinery &mdash; counting, inferring, deriving). Different machinery, both producing internal model-content.",
+    },
+  },
+  "percepts-abstract-coupling": {
+    id: "percepts-abstract-coupling",
+    tex: "\\mathcal{P}_i \\;\\longleftrightarrow\\; \\mathcal{A}_i",
+    tooltip: {
+      pronunciation:
+        "P-script sub i is in two-way coupling with A-script sub i",
+      symbols:
+        "$\\mathcal{P}_i$ is the endogenous percepts; $\\mathcal{A}_i$ is the abstract operations; $\\longleftrightarrow$ marks constant two-way exchange between them.",
+      context:
+        "The two branches of $\\mathcal{S}_i$ are tightly coupled in use. Abstract operations recruit endogenous percepts as scaffolding (sketches, inner speech, felt structure). Endogenous percepts get re-shaped by abstract operations (a diagram, once understood, stays understood). Most lived thinking is a hybrid.",
+    },
+  },
+  "world-within-loop": {
+    id: "world-within-loop",
+    tex: "\\sigma_i \\;\\longrightarrow\\; \\mathcal{S}_i \\;\\longrightarrow\\; \\hat{w}_i \\;\\longrightarrow\\; \\mathcal{S}_i \\;\\longrightarrow\\; \\ldots",
+    tooltip: {
+      pronunciation:
+        "sigma sub i arrow S-script sub i arrow w-hat sub i arrow S-script sub i arrow and so on",
+      symbols:
+        "$\\sigma_i$ is the sensorium; $\\mathcal{S}_i$ is the running simulation; $\\hat{w}_i$ is the standing model of $w$ that $i$ has accumulated; the arrows trace the order in which content flows.",
+      context:
+        "The feedback loop. Signal enters from $\\sigma_i$, gets deformed by $\\mathcal{S}_i$, sediments into $\\hat{w}_i$, and then $\\hat{w}_i$ shapes how $\\mathcal{S}_i$ deforms the next signal. Yesterday&rsquo;s deformation is today&rsquo;s prior; today&rsquo;s deformation lays down tomorrow&rsquo;s. The loop is what makes $\\hat{w}_i$ a moving target rather than a static record.",
+    },
+  },
+  "self-in-world-model": {
+    id: "self-in-world-model",
+    tex: "\\hat{i}_i \\;\\subset\\; \\hat{w}_i",
+    tooltip: {
+      pronunciation:
+        "i-hat sub i is a proper subset of w-hat sub i",
+      symbols:
+        "$\\hat{i}_i$ is the standing self-model &mdash; $i$&rsquo;s accumulated model of $i$; $\\hat{w}_i$ is the standing world-model; $\\subset$ is set inclusion.",
+      context:
+        "Since $i$ is a part of $w$ (proposition 3.1), $i$&rsquo;s model of $i$ is a region inside $i$&rsquo;s model of $w$. The self you experience is one neighbourhood inside the larger standing model. This is also the region $\\mathcal{S}_i$ samples most heavily &mdash; the loudest part of $\\hat{w}_i$ at runtime is the self.",
+    },
+  },
+  "wound-cross-component": {
+    id: "wound-cross-component",
+    tex: "\\xi_i \\;\\subset\\; \\text{body}_i \\,\\cup\\, \\hat{w}_i \\,\\cup\\, \\hat{i}_i \\,\\cup\\, \\mathcal{S}_i",
+    tooltip: {
+      pronunciation:
+        "xi sub i is a subset of body sub i union w-hat sub i union i-hat sub i union S-script sub i",
+      symbols:
+        "$\\xi_i$ is the wound; $\\text{body}_i$ is the bodily component of $i$; $\\hat{w}_i$ is the standing world-model; $\\hat{i}_i$ is the self-model; $\\mathcal{S}_i$ is the running simulation; $\\cup$ is set union; $\\subset$ is set inclusion.",
+      context:
+        "The wound is not contained in any single component &mdash; it is a pattern across components, with projections in each. Tissue-encoded in the body, priors in $\\hat{w}_i$ and $\\hat{i}_i$, activation patterns in $\\mathcal{S}_i$. Knitted together by injury and time, the projections act as a unit, which is why $\\xi_i$ feels like a thing rather than a scatter.",
+    },
+  },
+  "wound-monotone": {
+    id: "wound-monotone",
+    tex: "\\frac{d\\xi_i}{dt} \\;\\geq\\; 0",
+    tooltip: {
+      pronunciation:
+        "d xi sub i by d t is greater than or equal to zero",
+      symbols:
+        "$\\xi_i$ is the wound; $\\frac{d\\xi_i}{dt}$ is its rate of change in time; $\\geq 0$ says it does not decrease on its own.",
+      context:
+        "Without intervention, $\\xi_i$ only grows. Five mechanisms compose to produce the monotonicity: sensitization, avoidance, somatic encoding, narrative consolidation, and the stickiness of $\\hat{w}_i$. The same shape as the second law of thermodynamics ($\\frac{dS}{dt} \\geq 0$) and for the same reason &mdash; reversing the trend requires energy directed against it. Without that work, the wound calcifies.",
+    },
+  },
+  "autonomic-configuration": {
+    id: "autonomic-configuration",
+    detail: {
+      title: "Autonomic configuration",
+      html: `
+<p class="lead">
+  The autonomic configuration is the patterned baseline of
+  $i$&rsquo;s autonomic nervous system &mdash; the involuntary
+  state the body settles into when nothing is acutely demanding
+  otherwise. It is one of the deepest layers of
+  $\\xi_i$ because it precedes thought, shapes what
+  $\\mathcal{S}_i$ tends to generate, and is the substrate every
+  emotion is built on.
+</p>
+
+<h3>What the autonomic nervous system is</h3>
+<p>
+  The autonomic nervous system (ANS) is the branch of the nervous
+  system that runs the body without conscious control. Heart rate,
+  breath rate, blood pressure, digestion, pupil dilation, sweat,
+  immune activation, hormonal release, sexual response &mdash; all
+  governed by the ANS. It is the operating system for the body,
+  running below the surface of awareness.
+</p>
+<p>
+  Classical physiology divides it into two branches that work in
+  rough opposition:
+</p>
+<dl>
+  <dt>Sympathetic.</dt>
+  <dd>
+    Mobilization. The fight-or-flight system. Increases heart
+    rate, dilates pupils, redirects blood from gut to muscle,
+    releases adrenaline. The body preparing to act on threat or
+    opportunity.
+  </dd>
+  <dt>Parasympathetic.</dt>
+  <dd>
+    Recovery. Rest-and-digest. Slows heart rate, restores
+    digestion, supports immune function, enables sleep and
+    social connection. The body restoring itself.
+  </dd>
+</dl>
+
+<h3>Polyvagal refinement</h3>
+<p>
+  Stephen Porges&rsquo;s polyvagal theory (1990s onward) splits the
+  parasympathetic branch in two and gives a more accurate map of
+  the states the body actually inhabits. Three configurations:
+</p>
+<dl>
+  <dt>Ventral vagal &mdash; safe and social.</dt>
+  <dd>
+    Heart rate variable, breath full, face expressive, voice
+    modulated, gut active, attention available for others. The
+    state in which connection, play, learning, and creative work
+    are possible. Mediated by the newer (mammalian) branch of
+    the vagus nerve.
+  </dd>
+  <dt>Sympathetic &mdash; mobilized.</dt>
+  <dd>
+    Heart fast, breath shallow, muscles tense, attention
+    narrowed to threat or task. Fight, flight, alarm, agitation,
+    anxiety. Useful in acute danger; corrosive as a chronic
+    baseline.
+  </dd>
+  <dt>Dorsal vagal &mdash; shutdown.</dt>
+  <dd>
+    Heart slow, breath shallow or held, muscles slack or frozen,
+    affect flat, energy low, dissociation, numbness. The oldest
+    response, evolved for predator encounters where escape
+    failed. Useful as a last resort; devastating as a chronic
+    baseline.
+  </dd>
+</dl>
+<p>
+  These three states are not feelings <em>about</em> the world.
+  They are physiological configurations the body is <em>in</em>,
+  out of which feelings, thoughts, and behaviours arise. The same
+  $i$, in different autonomic states, perceives the same room
+  differently.
+</p>
+
+<h3>What &ldquo;configuration&rdquo; means</h3>
+<p>
+  Every $i$ has a baseline autonomic state &mdash; the state the
+  body returns to when no acute demand is present. For a
+  well-regulated $i$ the baseline is ventral vagal: calm,
+  available, responsive. The body moves into sympathetic when
+  action is needed, into dorsal in genuine overwhelm, and back to
+  ventral when the demand passes. The system is flexible.
+</p>
+<p>
+  For an $i$ with significant $\\xi_i$, the baseline shifts. The
+  body settles into sympathetic (chronic mobilization, anxiety,
+  hypervigilance) or dorsal (chronic shutdown, fatigue,
+  disconnection), or oscillates between them with little time in
+  ventral. The system loses flexibility. The
+  <em>configuration</em> &mdash; the home state the body returns
+  to &mdash; has been re-set.
+</p>
+
+<h3>How it gets engrained</h3>
+<p>
+  Autonomic state is learned through repetition. Each time the
+  body is held in a state &mdash; by external circumstance or by
+  $\\mathcal{S}_i$&rsquo;s output &mdash; that state&rsquo;s
+  neural and hormonal pathway is reinforced. The threshold to
+  re-enter it lowers. After enough repetition, the body
+  <em>defaults</em> to that state and requires effort to leave
+  it.
+</p>
+<p>
+  A childhood of unpredictable danger trains a sympathetic-dominant
+  baseline: the body learns that the world is always-already a
+  threat and pre-loads the response. A childhood of unmetabolizable
+  overwhelm or unresponsive caregiving trains a dorsal-dominant
+  baseline: the body learns that mobilization is futile and
+  pre-loads collapse. Both are intelligent adaptations to the
+  conditions in which they formed. Both calcify and outlive the
+  conditions that produced them.
+</p>
+
+<h3>How it manifests</h3>
+<dl>
+  <dt>Sympathetic-dominant baseline.</dt>
+  <dd>
+    Chronic anxiety, restlessness, irritability, racing thoughts,
+    difficulty sleeping or staying asleep, jaw clench, shallow
+    fast breath, gut activation (cramping, diarrhea, nausea),
+    hypervigilance, startle response. $\\mathcal{S}_i$ runs
+    threat scenarios on a loop because the body is already shaped
+    for them.
+  </dd>
+  <dt>Dorsal-dominant baseline.</dt>
+  <dd>
+    Chronic fatigue, low motivation, depressive flatness,
+    dissociation, &ldquo;not really here&rdquo; quality, slow
+    metabolism, immune suppression, difficulty feeling the body,
+    sense of frozenness, social withdrawal, hopelessness.
+    $\\mathcal{S}_i$ tends toward themes of futility, defeat,
+    invisibility.
+  </dd>
+  <dt>Mixed / oscillating.</dt>
+  <dd>
+    The most common pattern for moderate-to-severe $\\xi_i$:
+    bursts of sympathetic activation followed by dorsal collapse,
+    with brief or absent visits to ventral. Anxiety into
+    exhaustion into anxiety. The exhausting cycle of someone
+    chronically out of regulation.
+  </dd>
+</dl>
+
+<h3>Why it is the deepest layer of $\\xi_i$</h3>
+<p>
+  The autonomic configuration is <em>prior to</em> and
+  <em>generative of</em> much of the cognitive and emotional
+  content of $\\xi_i$. The body in sympathetic dominance
+  <em>produces</em> threat-themed simulation; the body in dorsal
+  dominance <em>produces</em> futility-themed simulation. You do
+  not first think anxious thoughts and then become anxious; the
+  autonomic state arrives first, and $\\mathcal{S}_i$ rationalizes
+  the body it is sitting in.
+</p>
+<p>
+  This is why purely cognitive work on $\\xi_i$ &mdash; insight,
+  reframing, &ldquo;changing the thoughts&rdquo; &mdash; has
+  limited reach. The thoughts are downstream of the state. The
+  state is what wants tending.
+</p>
+
+<h3>What this means for the work</h3>
+<p>
+  Because the autonomic configuration is bodily, it can only be
+  changed bodily. Practices that meet the body where it actually
+  is &mdash; not where $\\mathcal{S}_i$ wishes it were &mdash;
+  can re-train the baseline over time. The list is short and
+  unglamorous:
+</p>
+<dl>
+  <dt>Breath.</dt>
+  <dd>
+    Slow exhales engage the vagus and lower sympathetic arousal.
+    The breath is the one autonomic process voluntarily
+    accessible &mdash; the door into the rest.
+  </dd>
+  <dt>Movement.</dt>
+  <dd>
+    Discharges stored sympathetic activation (shaking,
+    intentional exertion) and brings frozen tissue back online
+    (yoga, somatic movement, dance). Sequence is everything &mdash;
+    the body needs to complete the response it could not complete
+    at the time of injury.
+  </dd>
+  <dt>Co-regulation.</dt>
+  <dd>
+    Other regulated nervous systems are the most powerful
+    autonomic stimuli we have. Time with someone calmly present
+    re-trains ventral access more efficiently than any solo
+    practice. Mammals are wired to borrow regulation from each
+    other.
+  </dd>
+  <dt>Sleep, nutrition, rhythm.</dt>
+  <dd>
+    The autonomic system depends on metabolic substrate. Sleep
+    deprivation, glycemic instability, and circadian disruption
+    push the baseline toward sympathetic. The unglamorous
+    foundations of regulation.
+  </dd>
+  <dt>Direct vagal practice.</dt>
+  <dd>
+    Humming, gargling, cold exposure to the face, singing &mdash;
+    practices that stimulate the vagus nerve directly. Small
+    interventions, repeatable, additive.
+  </dd>
+</dl>
+
+<p class="callout">
+  Cognitive insight without somatic work leaves the autonomic
+  configuration untouched and $\\xi_i$ intact at its deepest
+  layer. Somatic work without insight changes the body but
+  leaves the narratives that re-load it untouched. Both layers
+  want work, in that order if forced to choose: the body first,
+  because the body is what produces the room in which thinking
+  happens.
+</p>
+
+<p class="aside-detail">
+  The dance-floor moment in 12.4 is autonomic: a thread in the
+  music landed in the body&rsquo;s pattern, the dorsal branch of
+  the vagus fired, the muscles locked, the dance stopped. None
+  of that was a thought. It was a configuration coming online.
+</p>
+`,
+    },
+  },
+
+  "attention-subset": {
+    id: "attention-subset",
+    tex: "\\alpha_i \\;\\subset\\; i",
+    tooltip: {
+      pronunciation:
+        "alpha sub i is a subset of i",
+      symbols:
+        "$\\alpha_i$ is the beam of attention &mdash; $i$&rsquo;s capacity to direct its own processing resources toward chosen content; $\\subset$ is set inclusion; $i$ is the questioner&rsquo;s worldline.",
+      context:
+        "$\\alpha_i$ is a capacity belonging to $i$ as a whole, not a smaller agent inside $i$. The only degree of freedom $i$ has, and the foothold every later move in the document depends on. Finite, directable, captureable, trainable.",
+    },
+  },
+  "attention-contest": {
+    id: "attention-contest",
+    tex: "\\alpha_i \\;\\rightleftarrows\\; \\mathcal{S}_i",
+    tooltip: {
+      pronunciation:
+        "alpha sub i in tension with S-script sub i",
+      symbols:
+        "$\\alpha_i$ is the beam of attention; $\\mathcal{S}_i$ is the running simulation; $\\rightleftarrows$ marks the bidirectional contest of strengths between them at every moment.",
+      context:
+        "At any moment, what $i$ actually meets is the outcome of this contest. When $\\alpha_i$ is thick and $\\mathcal{S}_i$ thin, the beam pierces and $\\sigma_i$ becomes available. When $\\alpha_i$ is thin and $\\mathcal{S}_i$ thick &mdash; fatigue plus $\\xi_i$ activation &mdash; the beam stays captured no matter how much $i$ &ldquo;tries.&rdquo; Body state largely determines $\\alpha_i$&rsquo;s daily strength.",
+    },
+  },
+  "wound-loop": {
+    id: "wound-loop",
+    tex: "\\xi_i \\;\\longrightarrow\\; \\mathcal{S}_i \\;\\longrightarrow\\; \\text{body}_i \\;\\longrightarrow\\; \\xi_i \\;\\longrightarrow\\; \\ldots",
+    tooltip: {
+      pronunciation:
+        "xi sub i arrow S-script sub i arrow body sub i arrow xi sub i arrow and so on",
+      symbols:
+        "$\\xi_i$ is the wound; $\\mathcal{S}_i$ is the running simulation; $\\text{body}_i$ is the bodily component of $i$; the arrows trace the order of influence in the self-reinforcing loop.",
+      context:
+        "The self-accelerating cycle. $\\xi_i$ tunes $\\mathcal{S}_i$ toward threat content; $\\mathcal{S}_i$ output triggers autonomic activation in the body; chronic activation damages the body and lays down more $\\xi_i$. Each lap deepens the next. Without intervention, the loop runs unchecked and the territory available to $i$ contracts year over year.",
+    },
+  },
+  "sensorium-map": {
+    id: "sensorium-map",
+    tex: "\\sigma_i \\;:\\; w \\to \\text{percepts}",
+    tooltip: {
+      pronunciation:
+        "sigma sub i is a function from w to percepts",
+      symbols:
+        "$\\sigma_i$ as a mapping from the world to $i$&rsquo;s perceptual space. The colon-and-arrow notation means &ldquo;function from $w$ to percepts.&rdquo;",
+      context:
+        "What you experience as &ldquo;the world&rdquo; is not $w$ raw but $\\sigma_i$&rsquo;s reading of it &mdash; mediated by narrow sensor bands, inferential construction, and prior expectations. You never touch $w$ directly. You touch your construction of $w$.",
+    },
+  },
   pump: {
     id: "pump",
     tex: "\\frac{dS_{i}}{dt} \\;<\\; 0 \\quad \\text{only if} \\quad \\frac{dS_{\\text{env}}}{dt} \\;>\\; \\left|\\frac{dS_{i}}{dt}\\right|",
@@ -1129,6 +1898,582 @@ $$\\ln(W_A \\cdot W_B) \\;=\\; \\ln W_A + \\ln W_B$$
   },
 
   // Prose-only deep dives — no `tex`, reached from inline references.
+  "wave-speed-formula": {
+    id: "wave-speed-formula",
+    detail: {
+      title: "The wave-speed formula",
+      html: `
+<p class="lead">
+  A pressure wave&rsquo;s speed is set by two properties of the
+  medium: how <em>stiff</em> it is (how strongly it pushes back
+  when compressed) and how <em>dense</em> it is (how much mass per
+  unit volume). The formula:
+</p>
+
+<a class="eq-link" data-eq="wave-speed-sim" data-tip="wave-speed-eqn">
+
+$$v \\;=\\; \\sqrt{\\frac{K}{\\rho}}$$
+
+</a>
+
+<p>
+  Here $K$ is an <em>elastic modulus</em> (a measure of stiffness)
+  and $\\rho$ is density. Stiffer media transmit waves faster;
+  denser media transmit them slower. Why this shape?
+</p>
+
+<h3>The mass-and-spring picture</h3>
+<p>
+  Imagine the medium as a chain of small masses connected by
+  springs:
+</p>
+
+<figure class="wave-figure">
+  <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A row of masses connected by springs, with a compression pulse in the middle moving right">
+    <text x="300" y="22" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="13" fill="#8a8275">a row of masses connected by springs</text>
+
+    <g transform="translate(0, 100)">
+      <g stroke="#5a544c" stroke-width="2" fill="none">
+        <path d="M 92 0 q 6 -7 12 0 q 6 7 12 0 q 6 -7 12 0 q 6 7 12 0"/>
+        <path d="M 152 0 q 6 -7 12 0 q 6 7 12 0 q 6 -7 12 0 q 6 7 12 0"/>
+      </g>
+      <g stroke="#d97a4a" stroke-width="2.5" fill="none">
+        <path d="M 212 0 q 4 -7 8 0 q 4 7 8 0 q 4 -7 8 0"/>
+        <path d="M 252 0 q 4 -7 8 0 q 4 7 8 0 q 4 -7 8 0"/>
+        <path d="M 292 0 q 4 -7 8 0 q 4 7 8 0 q 4 -7 8 0"/>
+      </g>
+      <g stroke="#5a544c" stroke-width="2" fill="none">
+        <path d="M 332 0 q 6 -7 12 0 q 6 7 12 0 q 6 -7 12 0 q 6 7 12 0"/>
+        <path d="M 392 0 q 6 -7 12 0 q 6 7 12 0 q 6 -7 12 0 q 6 7 12 0"/>
+        <path d="M 452 0 q 6 -7 12 0 q 6 7 12 0 q 6 -7 12 0 q 6 7 12 0"/>
+      </g>
+
+      <g stroke="#14110d" stroke-width="1.5">
+        <circle cx="80" cy="0" r="11" fill="#ebe4d4"/>
+        <circle cx="140" cy="0" r="11" fill="#ebe4d4"/>
+        <circle cx="200" cy="0" r="11" fill="#d97a4a"/>
+        <circle cx="240" cy="0" r="11" fill="#d97a4a"/>
+        <circle cx="280" cy="0" r="11" fill="#d97a4a"/>
+        <circle cx="320" cy="0" r="11" fill="#d97a4a"/>
+        <circle cx="380" cy="0" r="11" fill="#ebe4d4"/>
+        <circle cx="440" cy="0" r="11" fill="#ebe4d4"/>
+        <circle cx="500" cy="0" r="11" fill="#ebe4d4"/>
+      </g>
+    </g>
+
+    <g transform="translate(0, 155)" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="13" fill="#d97a4a">
+      <text x="260" y="0" text-anchor="middle">compression pulse</text>
+      <path d="M 330 -4 L 360 -4 M 354 -9 L 360 -4 L 354 1" stroke="#d97a4a" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <g transform="translate(0, 190)" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="12" fill="#8a8275">
+      <text x="125" y="0" text-anchor="middle">$K$ (spring stiffness)</text>
+      <text x="475" y="0" text-anchor="middle">$\\rho$ (mass per length)</text>
+    </g>
+  </svg>
+  <figcaption>
+    When one mass is pushed, its spring compresses, the spring
+    pushes the next mass, that mass compresses the next spring, and
+    so on. The wave is this disturbance travelling down the chain.
+  </figcaption>
+</figure>
+
+<h3>Why stiffness speeds the wave</h3>
+<p>
+  Stiffness $K$ controls how strongly the spring pushes back when
+  compressed. A stiff spring snaps back fast; a loose spring lazily
+  drifts back. Faster snap-back means each mass starts moving
+  sooner, which means the next mass starts moving sooner, which
+  means the wave reaches the end sooner. <strong>Stiffer &rArr;
+  faster.</strong>
+</p>
+
+<h3>Why density slows the wave</h3>
+<p>
+  Density $\\rho$ controls how much mass each spring has to move.
+  A heavy mass accelerates slowly even when pushed hard (it has
+  more inertia). Light masses respond quickly to the same force.
+  <strong>Heavier &rArr; slower.</strong>
+</p>
+
+<h3>Why the square root</h3>
+<p>
+  Newton&rsquo;s second law applied to each mass in the chain
+  gives $F = m\\,a$. The spring force depends on compression
+  (Hooke&rsquo;s law, $F = -K x$). Setting these equal and looking
+  for wavelike solutions yields the wave equation, whose
+  propagation speed is exactly $\\sqrt{K/\\rho}$.
+</p>
+<p>
+  The square root falls out because the wave equation has $v^{2}$
+  in it, not $v$ &mdash; the equations of motion are second-order
+  in time and second-order in space. You can also feel it
+  intuitively: doubling stiffness doesn&rsquo;t double the speed,
+  it multiplies it by $\\sqrt{2}$, because the spring drives a
+  whole succession of masses, and the per-mass acceleration
+  benefit compounds geometrically rather than linearly.
+</p>
+
+<h3>Real-world numbers</h3>
+<p>Plugging in measured values for $K$ (the bulk modulus) and $\\rho$:</p>
+<dl>
+  <dt>Air at room temperature.</dt>
+  <dd>
+    <span
+      data-tt-say="Air: bulk modulus 1.4 times 10 to the 5 pascals; density 1.2 kilograms per cubic metre; speed approximately 343 metres per second"
+      data-tt-sym="$K \\approx 1.4 \\times 10^{5}$ Pa (relatively compressible); $\\rho \\approx 1.2$ kg/m³ (light); $v \\approx 343$ m/s."
+      data-tt-ctx="The familiar speed of sound in air. Air is easy to compress and very light, so although its stiffness is small, its density is small too &mdash; the ratio gives a modest but real speed. This is the speed at which a clap reaches a listener and the speed lightning&rsquo;s thunder lags behind the flash."
+    >$K \\approx 1.4 \\times 10^{5}$ Pa,
+    $\\rho \\approx 1.2$ kg/m³ &rArr; $v \\approx 343$ m/s.</span>
+  </dd>
+  <dt>Water.</dt>
+  <dd>
+    <span
+      data-tt-say="Water: bulk modulus 2.2 times 10 to the 9 pascals; density 1000 kilograms per cubic metre; speed approximately 1500 metres per second"
+      data-tt-sym="$K \\approx 2.2 \\times 10^{9}$ Pa (much stiffer than air); $\\rho \\approx 1000$ kg/m³ (much denser); $v \\approx 1{,}500$ m/s."
+      data-tt-ctx="Water is roughly $15{,}000\\times$ stiffer than air and about $800\\times$ denser. Stiffness wins on the square root, so sound travels in water about four times faster than in air. Whales and dolphins exploit this for long-range communication."
+    >$K \\approx 2.2 \\times 10^{9}$ Pa, $\\rho \\approx 1000$ kg/m³
+    &rArr; $v \\approx 1{,}500$ m/s.</span>
+  </dd>
+  <dt>Steel.</dt>
+  <dd>
+    <span
+      data-tt-say="Steel: Young's modulus approximately 2 times 10 to the 11 pascals; density 7850 kilograms per cubic metre; speed approximately 5000 metres per second"
+      data-tt-sym="Young&rsquo;s modulus $\\approx 2 \\times 10^{11}$ Pa (extremely stiff); $\\rho \\approx 7850$ kg/m³ (heavy); $v \\approx 5{,}000$ m/s."
+      data-tt-ctx="Steel is over a million times stiffer than air but only about $6{,}500\\times$ denser. The huge stiffness advantage wins by a wide margin; pressure waves rip through steel at about $15\\times$ the speed of sound in air. This is why a hammer-strike on a long steel rail can be heard pressing your ear to the rail before it arrives through air."
+    >Young&rsquo;s modulus $\\approx 2 \\times 10^{11}$ Pa,
+    $\\rho \\approx 7850$ kg/m³ &rArr; $v \\approx 5{,}000$ m/s.</span>
+  </dd>
+</dl>
+<p>
+  Steel is over a million times stiffer than air, but only about
+  $6{,}500$ times denser. Stiffness wins by a wide margin, but the
+  square root tames the ratio: steel transmits pressure waves
+  about $15\\times$ faster than air, not a million times faster.
+</p>
+
+<p class="aside-detail">
+  The same formula shape appears across physics. Tension and
+  linear mass density set the speed of waves on a string. Shear
+  modulus and density set the speed of shear waves in solids. The
+  pattern: <strong>speed is the square root of restoring strength
+  over inertia.</strong> Stiffness fights, mass resists, the wave
+  is what comes out of their negotiation.
+</p>
+`,
+    },
+  },
+
+  "pressure-waves": {
+    id: "pressure-waves",
+    detail: {
+      title: "Pressure waves",
+      html: `
+<p class="lead">
+  A pressure wave is a propagating disturbance in the local pressure
+  of a medium &mdash; a region where the medium is momentarily
+  compressed (higher density and pressure) followed by a region
+  where it is rarefied (lower density and pressure), with this
+  pattern travelling outward from a source.
+</p>
+
+<h3>Mechanism</h3>
+<p>
+  Unlike
+  <a class="eq-ref" data-eq="em-radiation">electromagnetic
+  radiation</a>, a pressure wave needs a medium &mdash; a gas,
+  liquid, or solid &mdash; because it propagates by mechanical
+  interaction. Each parcel of the medium pushes on its neighbour,
+  which pushes on <em>its</em> neighbour, and so on. The disturbance
+  moves through the medium, but the medium itself does not travel
+  along with it. Particles oscillate around their resting positions
+  and pass energy along.
+</p>
+
+<h3>Longitudinal character</h3>
+<p>
+  Pressure waves are <em>longitudinal</em>: the oscillation of the
+  medium is parallel to the direction of propagation, not
+  perpendicular to it. This distinguishes them from transverse
+  waves (like light, or like the shear waves that can travel through
+  solids). Sound in air is the canonical example &mdash; a sequence
+  of compressions and rarefactions moving outward.
+</p>
+
+<h3>Speed</h3>
+<p>
+  The speed depends on the medium&rsquo;s stiffness and density
+  &mdash; specifically,
+  <a class="eq-ref" data-eq="wave-speed-formula">the square root of
+  the ratio of an elastic modulus to density</a>. Stiffer, less
+  dense media transmit pressure waves faster.
+</p>
+<dl>
+  <dt>Air at room temperature</dt>
+  <dd>about $343$ m/s</dd>
+  <dt>Water</dt>
+  <dd>about $1{,}500$ m/s</dd>
+  <dt>Steel</dt>
+  <dd>about $5{,}000$ m/s</dd>
+</dl>
+
+<h3>Place in $w$</h3>
+<p>
+  <em>As a constituent.</em> Pressure waves are not fundamental
+  entities of $w$ in the way the electromagnetic field is. They are
+  <em>patterns in the behaviour of matter</em> &mdash; collective,
+  emergent phenomena of large numbers of particles interacting.
+  Strip away the medium and there is no wave. Pressure waves are
+  ontologically dependent on matter in a way EM radiation is not on
+  anything.
+</p>
+<p>
+  <em>As a relation.</em> A pressure wave is a way that one region
+  of matter influences another through the intervening medium
+  &mdash; mechanical causation at a distance, mediated step by
+  step.
+</p>
+<p>
+  <em>As a carrier of information.</em> Within $w$, pressure waves
+  are a major channel by which spatially separated parts of the
+  world inform one another &mdash; hearing, echolocation, sonar,
+  seismology. Almost everything organisms know about their
+  immediate acoustic environment arrives as pressure waves.
+  Seismic pressure waves are one of the few probes we have of the
+  deep interior of the Earth.
+</p>
+<p>
+  <em>As lawful behaviour.</em> Governed by the wave equation
+  derived from the equations of continuum mechanics
+  (Euler&rsquo;s equations for fluids, or the elastic wave
+  equations for solids), which are themselves derivable from the
+  more fundamental dynamics of the constituent particles.
+</p>
+
+<h3>Range</h3>
+<p>
+  The audible band for humans is roughly $20$ Hz to $20$ kHz, but
+  pressure waves extend far beyond this in both directions.
+</p>
+<dl>
+  <dt>Infrasound (below $20$ Hz).</dt>
+  <dd>
+    Elephants, whales, earthquakes, atmospheric disturbances.
+  </dd>
+  <dt>Ultrasound (above $20$ kHz).</dt>
+  <dd>Bats, medical imaging, industrial cleaning.</dd>
+</dl>
+<p>
+  At extremely high amplitudes the linear wave equation breaks down
+  and you get <em>shock waves</em> &mdash; nonlinear discontinuities
+  where the leading edge of the compression catches up with itself.
+</p>
+
+<p class="callout">
+  Pressure waves contrast cleanly with electromagnetic radiation
+  along the medium / no-medium axis. EM radiation propagates
+  through vacuum; pressure waves require matter to exist at all.
+  One is the world&rsquo;s primary long-range carrier; the other,
+  the world&rsquo;s short-range mechanical carrier of acoustic
+  information.
+</p>
+
+<p class="aside-detail">
+  What your eardrum catches between $20$ Hz and $20$ kHz is a
+  narrow band of pressure-wave behaviour shared with much of the
+  animal kingdom. Most of the pressure-wave conversation in your
+  immediate environment falls outside that window &mdash; in the
+  infrasound of weather and machinery, or the ultrasound of bats
+  and rodents. $\\sigma_i$ tunes to a sliver.
+</p>
+`,
+    },
+  },
+
+  "em-radiation": {
+    id: "em-radiation",
+    detail: {
+      title: "Electromagnetic radiation",
+      html: `
+<p class="lead">
+  Electromagnetic radiation is what light <em>is</em> &mdash; but at
+  a deeper level than that. It is not just &ldquo;what we see&rdquo;
+  or &ldquo;the visible band we react to.&rdquo; It is one of the
+  fundamental constituents of $w$ itself. Worth several angles.
+</p>
+
+<h3>As a constituent of $w$</h3>
+<p>
+  Electromagnetic radiation is one of the fundamental things the
+  world contains. Alongside matter, gravitation, and the other force
+  fields, it is part of the basic inventory of $w$. It is not a
+  property of objects so much as it is its own kind of entity: a
+  field with excitations (photons) that exists in its own right.
+</p>
+
+<h3>As a field on spacetime</h3>
+<p>
+  More precisely, the electromagnetic field is a structure defined
+  at every point of spacetime in $w$. At each point there is an
+  electric-field vector and a magnetic-field vector (or, more
+  elegantly, a single tensor combining them). <em>Electromagnetic
+  radiation</em> is what you get when this field has self-sustaining
+  wavelike excitations propagating through it.
+</p>
+
+<h3>As a carrier of information about $w$</h3>
+<p>
+  Epistemically, electromagnetic radiation is the principal medium
+  by which parts of $w$ reveal themselves to other parts. Almost
+  everything observers know about distant regions of the world
+  arrives as photons. Light from stars, X-rays from black holes,
+  microwaves from the cosmic background &mdash; all are
+  electromagnetic radiation carrying information across vast spans
+  of $w$.
+</p>
+<p>
+  So it has a dual status: it is a thing in the world, and the main
+  channel through which the world becomes knowable.
+</p>
+
+<h3>As a relation between charges</h3>
+<p>
+  Causally, electromagnetic radiation is how electrically charged
+  parts of $w$ influence one another across distance. Accelerate a
+  charge here, and a charge over there is disturbed later. The
+  radiation is the intervening reality that makes this
+  non-instantaneous influence possible &mdash; the medium of
+  causation between separated charges.
+</p>
+
+<h3>As lawful behaviour</h3>
+<p>
+  Modally, the existence and behaviour of electromagnetic radiation
+  in $w$ is governed by <em>Maxwell&rsquo;s equations</em>
+  (classically) or <em>quantum electrodynamics</em> (more
+  fundamentally). These laws are themselves features of $w$
+  &mdash; not imposed on it, but part of its structure.
+</p>
+
+<h3>A compact definition</h3>
+
+<p class="callout">
+  In $w$, electromagnetic radiation is a propagating excitation of
+  the electromagnetic field &mdash; itself a fundamental constituent
+  of $w$ &mdash; that mediates interactions among charged entities
+  and serves as the dominant medium through which spatially
+  separated parts of $w$ causally and informationally connect.
+</p>
+
+<p class="aside-detail">
+  What your retina catches between $400$ and $700$ nm is a narrow
+  band of this much larger structure. The light you see is the
+  small slice of the electromagnetic field that happens to fall
+  within $\\sigma_i$&rsquo;s sensitivity. Most of the EM field&rsquo;s
+  conversation with the world bypasses you entirely.
+</p>
+`,
+    },
+  },
+
+  "pinning-down-na": {
+    id: "pinning-down-na",
+    detail: {
+      title: "Pinning down Avogadro&rsquo;s number",
+      html: `
+<p class="lead">
+  The historical detective story of how Avogadro&rsquo;s
+  <em>qualitative</em> hypothesis &mdash; <em>&ldquo;equal volumes
+  hold equal counts&rdquo;</em> &mdash; got turned into the
+  <em>quantitative</em> number $6 \\times 10^{23}$. Avogadro himself
+  never knew the number; he just knew it had to exist. It took about
+  a century after his proposal for anyone to nail it down.
+</p>
+
+<p>Here is the logic chain that gets you from the hypothesis to the number.</p>
+
+<h3>Step 1: The hypothesis gives you ratios, not absolutes</h3>
+<p>
+  Avogadro&rsquo;s principle tells you that if $22.4$ litres of
+  hydrogen and $22.4$ litres of oxygen are at the same temperature
+  and pressure, they contain the same number of molecules. But it
+  does not say how many. The number could be a thousand, a billion,
+  or a trillion trillion &mdash; the hypothesis is silent.
+</p>
+
+<h3>Step 2: Combine with mass measurements to get relative molecular masses</h3>
+<p>
+  Once you accept the hypothesis, you can compare gas densities to
+  learn how heavy molecules are relative to each other. Example: at
+  the same temperature and pressure, $1$ litre of oxygen weighs
+  $16$ times more than $1$ litre of hydrogen. Since both litres
+  contain the same number of molecules, each oxygen molecule must
+  weigh $16$ times more than each hydrogen molecule. You now know
+  the ratio of molecular masses, even though you still do not know
+  any absolute mass.
+</p>
+<p>
+  By the mid-1800s, chemists had built up a complete table of
+  relative atomic masses this way &mdash; hydrogen $=1$, carbon
+  $=12$, oxygen $=16$, and so on &mdash; without knowing the actual
+  mass of a single atom in grams.
+</p>
+
+<h3>Step 3: Define the mole as a self-referential bridge</h3>
+<p>
+  Chemists made a clever definitional move: take a quantity of any
+  substance whose mass <em>in grams</em> equals its molecular mass
+  <em>in atomic-mass-units</em>, and call that &ldquo;one
+  mole.&rdquo; So $2$ grams of $\\text{H}_2$, $32$ grams of
+  $\\text{O}_2$, $18$ grams of $\\text{H}_2\\text{O}$, $12$ grams
+  of carbon &mdash; all are one mole.
+</p>
+<p>
+  By construction, one mole of any substance contains the same
+  number of molecules as one mole of any other substance. That
+  number is Avogadro&rsquo;s constant, $N_A$. But notice: the
+  definition does not <em>tell</em> you the number. It just
+  guarantees that whatever the number is, it is the same across
+  substances. You have moved the unknown from &ldquo;molecule
+  count in a litre&rdquo; to &ldquo;molecules per mole&rdquo;
+  &mdash; still unknown, but now a single universal constant
+  rather than a per-gas quantity.
+</p>
+
+<h3>Step 4: Find a way to actually count</h3>
+<p>
+  This is where you need an experiment that probes individual
+  molecules. Several routes exist; here are the three historically
+  most important.
+</p>
+
+<p>
+  <em>Brownian motion (Einstein 1905, Perrin 1908).</em> Einstein
+  derived a formula showing that if you suspend tiny particles
+  (like pollen grains) in a fluid, they get kicked around by water
+  molecules in a specific statistical pattern. The mean-squared
+  distance a particle wanders in time $t$ depends on temperature,
+  fluid viscosity, particle radius, and &mdash; crucially &mdash;
+  on $N_A$:
+</p>
+
+$$\\langle x^2 \\rangle \\;=\\; \\frac{R \\, T \\, t}{3 \\pi \\eta r N_A}$$
+
+<p>
+  Every variable on the right except $N_A$ is measurable: $R$ is
+  the gas constant (from gas-pressure experiments), $T$ is
+  temperature, $\\eta$ is viscosity (measurable in a viscometer),
+  $r$ is the particle radius (measurable in a microscope), and
+  $\\langle x^2 \\rangle$ is the average jiggle distance
+  (measurable by watching pollen under a microscope and timing it).
+  Plug everything in, solve for $N_A$. Perrin spent years doing
+  exactly this experiment and got $N_A \\approx 6 \\times 10^{23}$
+  in 1908. He won the Nobel Prize for it in 1926.
+</p>
+
+<p>
+  <em>Electrolysis (Faraday-style).</em> Pass a known electric
+  current through a solution and weigh how much metal deposits on
+  an electrode. You know two things independently: the total
+  electric charge that flowed (from current $\\times$ time), and
+  the mass of metal deposited. Each metal atom carries a specific
+  number of electrons during the reaction, and each electron
+  carries charge $e$. So:
+</p>
+
+$$\\text{total charge} \\;=\\; (\\text{atoms deposited}) \\times (\\text{electrons per atom}) \\times e$$
+
+<p>
+  If you also know $e$ (Millikan measured it in 1909 with his
+  famous oil-drop experiment), and you know the mass per mole of
+  the metal, you can solve for atoms per mole. This gives $N_A$
+  again, around $6 \\times 10^{23}$.
+</p>
+
+<p>
+  <em>X-ray crystallography (the modern gold standard).</em> Take
+  a perfect crystal of silicon. X-ray diffraction tells you the
+  exact lattice spacing &mdash; how far apart the atoms sit
+  &mdash; to extreme precision. From the geometry of a silicon
+  crystal you can compute the volume occupied by one atom.
+  Measure the macroscopic density of the crystal (mass per unit
+  volume) and the molar mass of silicon, and you can compute how
+  many atoms are in a mole:
+</p>
+
+$$N_A \\;=\\; \\frac{\\text{molar mass}}{\\text{density} \\times \\text{volume per atom}}$$
+
+<p>
+  Modern versions of this experiment using ultra-pure
+  isotopically-enriched silicon-28 spheres pin down $N_A$ to about
+  nine decimal places.
+</p>
+
+<h3>Step 5: Confidence comes from agreement</h3>
+<p>
+  No single experiment <em>proves</em> $N_A$ &mdash; what is
+  convincing is that wildly different methods all converge on the
+  same number. Brownian motion (watching pollen jiggle),
+  electrolysis (weighing electroplated metal), X-ray
+  crystallography (measuring crystal lattices), blackbody
+  radiation (fitting the curve of glowing hot objects), Boltzmann
+  constant measurements (acoustic resonance in argon spheres)
+  &mdash; all give $N_A \\approx 6.022 \\times 10^{23}$.
+</p>
+
+<p class="callout">
+  There is no reason these techniques should agree unless atoms
+  are real and the molecular picture of matter is correct.
+</p>
+
+<h3>Step 6: The 2019 redefinition</h3>
+<p>
+  Up until 2019, $N_A$ was a <em>measured</em> number &mdash; the
+  best experimental value, with uncertainty in the last digit. In
+  2019, the international metrology committee inverted this: they
+  <em>defined</em> Avogadro&rsquo;s number to be exactly
+  $6.02214076 \\times 10^{23}$ and then redefined the mole as
+  &ldquo;exactly that many entities.&rdquo;
+</p>
+<p>
+  So now $N_A$ is exact by fiat, the way the speed of light is
+  exact by fiat, and the kilogram is now defined in terms of $N_A$
+  (along with Planck&rsquo;s constant) rather than the other way
+  around. The chosen value was the best measured value, rounded
+  to enough digits that no practical chemistry would notice the
+  change.
+</p>
+
+<h3>The big picture</h3>
+<p>
+  Avogadro&rsquo;s hypothesis itself does not give you the number
+  $6 \\times 10^{23}$ &mdash; it just tells you that <em>some</em>
+  such universal constant must exist. The number comes from
+  independent experiments that probe individual molecules:
+  watching them push pollen, counting them via electric charge,
+  measuring their spacing in crystals.
+</p>
+
+<p class="callout">
+  Avogadro&rsquo;s hypothesis is the conceptual scaffolding that
+  says &ldquo;look for one number.&rdquo; Experiment is what fills
+  in which number it is.
+</p>
+
+<p class="aside-detail">
+  There is something philosophically lovely here. Avogadro
+  proposed in 1811 that such a constant must exist, and did not
+  live to see it measured. Perrin measured it almost a century
+  later, and proved atoms were real in the process. In 2019,
+  humanity decided we trusted the number enough to make it a
+  definition. Three steps spread over two centuries:
+  <em>posit it exists &rarr; measure it &rarr; crown it as a
+  constant of nature.</em>
+</p>
+`,
+    },
+  },
+
   "what-mole-is": {
     id: "what-mole-is",
     detail: {
@@ -1545,6 +2890,12 @@ $$8 \\times 10^{24} \\times 4 \\times 10^{-21} \\;\\approx\\; 3 \\times 10^{4} \
   that one has $10^{-23}$ and the other has $10^{23}$ is <em>not a
   coincidence</em> &mdash; it is basically the whole story.
 </p>
+<p>
+  Avogadro himself never knew the actual number &mdash; only that it
+  had to exist. Pinning down the specific value $\\sim 6 \\times 10^{23}$
+  took <a class="eq-ref" data-eq="pinning-down-na">about a century of
+  detective work</a>.
+</p>
 
 <h3>Temperature is per-molecule energy in disguise</h3>
 <p>
@@ -1569,9 +2920,9 @@ $$8 \\times 10^{24} \\times 4 \\times 10^{-21} \\;\\approx\\; 3 \\times 10^{4} \
 </p>
 
 <div
-  data-tt-say="k-B times N-A is approximately ten to the minus twenty-three times ten to the twenty-three, approximately one"
-  data-tt-sym="$k_B \\sim 10^{-23}$ J/K (per-molecule); $N_A \\sim 10^{23}$ (molecules per mole); their product is order one."
-  data-tt-ctx="The whole reason these constants are mirror images: the smallness of $k_B$ exactly cancels the bigness of $N_A$, leaving an order-one prefactor at human scale."
+  data-tt-say="k-B times N-A is approximately one, in order of magnitude"
+  data-tt-sym="$k_B \\sim 10^{-23}$ J/K is the per-molecule thermal-energy scale; $N_A \\approx 6 \\times 10^{23}$ is Avogadro&rsquo;s number, the count of molecules in one mole."
+  data-tt-ctx="$N_A$ comes from chemistry. Amedeo Avogadro proposed in 1811 that equal volumes of gas at the same temperature and pressure contain equal numbers of molecules &mdash; meaning there is a definite count of molecules in any given chunk of stuff. The specific value $\\sim 6 \\times 10^{23}$ is whatever count makes atomic masses come out as convenient gram quantities: one mole of carbon weighs $12$ g, one mole of water weighs $18$ g. Multiplying $k_B$ by $N_A$ scales the per-molecule quantity up to per-mole &mdash; the unit chemistry actually works in. The cancellation of $10^{-23}$ against $10^{23}$ is why these constants are mirror images."
 >
 
 $$k_B \\times N_A \\;\\approx\\; 10^{-23} \\times 10^{23} \\;\\approx\\; 1 \\quad \\text{(order of magnitude)}$$

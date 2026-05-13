@@ -127,10 +127,12 @@ p {
   margin: 1.6rem 0 !important;
 }
 
-/* equations inside a .prop should span both grid columns */
+/* equations inside a .prop should span both grid columns. Auto-render
+   wraps its output in a generic <span>, so we use :has() to catch it. */
 .prop > .eq-link,
 .prop > .katex-display,
-.prop > [data-tt-say] {
+.prop > [data-tt-say],
+.prop > :has(> .katex-display) {
   grid-column: 1 / -1;
 }
 
@@ -242,6 +244,129 @@ p {
   .bit-row__label {
     font-size: 0.88rem;
   }
+}
+
+/* interactive mass-spring simulation widget */
+.wave-sim {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: rgba(217, 122, 74, 0.025);
+}
+.wave-sim__canvas {
+  display: block;
+  width: 100%;
+  height: 160px;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+}
+.wave-sim__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 1.5rem;
+  margin-top: 1.25rem;
+}
+.wave-sim__control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+.wave-sim__caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.92rem;
+}
+.wave-sim__label {
+  font-style: italic;
+  color: var(--ink);
+}
+.wave-sim__value {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+.wave-sim__readout {
+  grid-column: 1 / -1;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  color: var(--ink);
+  font-family: "EB Garamond", serif;
+  text-align: center;
+}
+.wave-sim__v-value {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-left: 0.25rem;
+}
+.wave-sim__reset {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 0.2rem;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  background: rgba(217, 122, 74, 0.08);
+  color: var(--ink);
+  border: 1px solid rgba(217, 122, 74, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+.wave-sim__reset:hover,
+.wave-sim__reset:focus-visible {
+  background: rgba(217, 122, 74, 0.18);
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+.wave-sim input[type="range"] {
+  accent-color: var(--accent);
+  height: 4px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .wave-sim__controls {
+    grid-template-columns: 1fr;
+  }
+  .wave-sim__reset {
+    justify-self: stretch;
+    text-align: center;
+  }
+}
+
+/* wave-speed diagram (mass-spring SVG) */
+.wave-figure {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.25rem 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: rgba(217, 122, 74, 0.025);
+  text-align: center;
+}
+.wave-figure svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+.wave-figure figcaption {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 /* hover tooltip on equations */
