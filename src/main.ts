@@ -27,8 +27,21 @@ const renderProse = (container: HTMLElement) => {
   });
 };
 
-// ── Hover tooltip for equations ──────────────────────────────────────
+// ── Tooltip for equations ────────────────────────────────────────────
+// Two regimes, same content:
+//   Desktop (hover: hover) — floating tooltip near the cursor, mouse driven.
+//   Touch   (hover: none)  — bottom-sheet panel with backdrop, tap driven.
+// CSS handles the visual layout; JS picks the trigger events.
+
 let tooltipEl: HTMLDivElement | null = null;
+let backdropEl: HTMLDivElement | null = null;
+
+// Cache the touch-environment check. matchMedia is constant for the page
+// lifetime in practice, so this is fine.
+const isTouchEnvironment = (): boolean =>
+  typeof window !== "undefined" &&
+  typeof window.matchMedia === "function" &&
+  window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
 const ensureTooltip = (): HTMLDivElement => {
   if (tooltipEl) return tooltipEl;
@@ -39,8 +52,18 @@ const ensureTooltip = (): HTMLDivElement => {
   return tooltipEl;
 };
 
+const ensureBackdrop = (): HTMLDivElement => {
+  if (backdropEl) return backdropEl;
+  backdropEl = document.createElement("div");
+  backdropEl.className = "math-tooltip-backdrop";
+  backdropEl.addEventListener("click", hideTooltip);
+  document.body.appendChild(backdropEl);
+  return backdropEl;
+};
+
 const positionTooltip = (e: MouseEvent) => {
   if (!tooltipEl) return;
+  if (isTouchEnvironment()) return; // bottom-sheet handles its own position
   const margin = 14;
   const rect = tooltipEl.getBoundingClientRect();
   let left = e.clientX + margin;
@@ -55,10 +78,29 @@ const positionTooltip = (e: MouseEvent) => {
   tooltipEl.style.top = `${Math.max(8, top)}px`;
 };
 
-const showTooltip = (eq: Equation, e: MouseEvent) => {
+const showTooltip = (
+  eq: Equation,
+  e: MouseEvent | null,
+  navHref: string | null = null
+) => {
   if (!eq.tooltip) return;
   const tt = ensureTooltip();
+  const touch = isTouchEnvironment();
+  if (touch) ensureBackdrop();
+
+  // Touch-mode-only affordances: a close button and an optional "open topic"
+  // link for triggers that point to a detail page. Both elements are inert
+  // on desktop via CSS (display: none).
+  const openHTML =
+    navHref && eq.detail
+      ? `<a class="math-tooltip__open" href="${navHref}">Open topic &rarr;</a>`
+      : "";
+  const closeHTML = touch
+    ? `<button class="math-tooltip__close" type="button" aria-label="Close">&times;</button>`
+    : "";
+
   tt.innerHTML = `
+    ${closeHTML}
     <div class="math-tooltip__section">
       <div class="math-tooltip__label">Read aloud</div>
       <div class="math-tooltip__pronunciation">&ldquo;${eq.tooltip.pronunciation}&rdquo;</div>
@@ -71,23 +113,70 @@ const showTooltip = (eq: Equation, e: MouseEvent) => {
       <div class="math-tooltip__label">In context</div>
       <div>${eq.tooltip.context}</div>
     </div>
+    ${openHTML}
   `;
   renderProse(tt);
-  tt.classList.add("math-tooltip--visible");
-  positionTooltip(e);
+
+  // Wire the close button and the open-topic link to dismiss the tooltip
+  tt.querySelector(".math-tooltip__close")?.addEventListener("click", hideTooltip);
+  tt.querySelector(".math-tooltip__open")?.addEventListener("click", () => {
+    // Let the hash navigation proceed, then dismiss
+    requestAnimationFrame(hideTooltip);
+  });
+
+  if (touch) {
+    // Bottom-sheet mode — animate via transform on next frame so the
+    // initial transform: translateY(100%) renders first.
+    document.body.classList.add("tooltip-open");
+    requestAnimationFrame(() => {
+      tt.classList.add("math-tooltip--visible");
+      backdropEl?.classList.add("math-tooltip-backdrop--visible");
+    });
+  } else {
+    // Floating mode — show, then position near the cursor
+    tt.classList.add("math-tooltip--visible");
+    if (e) positionTooltip(e);
+  }
 };
 
 const hideTooltip = () => {
-  if (!tooltipEl) return;
-  tooltipEl.classList.remove("math-tooltip--visible");
+  if (tooltipEl) tooltipEl.classList.remove("math-tooltip--visible");
+  if (backdropEl)
+    backdropEl.classList.remove("math-tooltip-backdrop--visible");
+  document.body.classList.remove("tooltip-open");
 };
 
 const attachTooltip = (trigger: HTMLElement, eq: Equation) => {
   if (!eq.tooltip) return;
   trigger.classList.add("math-tooltipped");
-  trigger.addEventListener("mouseenter", (e) => showTooltip(eq, e));
-  trigger.addEventListener("mousemove", positionTooltip);
-  trigger.addEventListener("mouseleave", hideTooltip);
+
+  // Desktop hover. The handlers themselves re-check the environment in case
+  // a synthetic mouse event fires on a touch tap (iOS does this); on touch
+  // the hover path is a no-op and the click handler below takes over.
+  trigger.addEventListener("mouseenter", (e) => {
+    if (isTouchEnvironment()) return;
+    showTooltip(eq, e);
+  });
+  trigger.addEventListener("mousemove", (e) => {
+    if (isTouchEnvironment()) return;
+    positionTooltip(e);
+  });
+  trigger.addEventListener("mouseleave", () => {
+    if (isTouchEnvironment()) return;
+    hideTooltip();
+  });
+
+  // Touch tap. Show the bottom sheet; intercept the link navigation on
+  // tooltipped anchors so the first tap previews and the user explicitly
+  // confirms via the "Open topic" button inside the sheet.
+  trigger.addEventListener("click", (e) => {
+    if (!isTouchEnvironment()) return;
+    const link = trigger as HTMLAnchorElement;
+    const href =
+      link.tagName === "A" ? link.getAttribute("href") : null;
+    if (href) e.preventDefault();
+    showTooltip(eq, null, href);
+  });
 };
 
 // After KaTeX renders inline math, a trailing punctuation mark (period,
