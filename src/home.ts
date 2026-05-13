@@ -2947,8 +2947,4 @@ export const homeHTML = `
     </p>
   </section>
 
-  <footer>
-    To be continued. Each iteration carves <span class="var">w</span> a little
-    finer.
-  </footer>
 `;
