@@ -8,10 +8,12 @@ import { initWaveSim } from "./wave-sim.ts";
 
 const app = document.getElementById("app")!;
 
-// Track scroll position on the map so we can restore it when the reader
-// returns from a detail page.
-let homeScrollY = 0;
-let lastRouteWasHome = false;
+// Scroll positions keyed by full URL hash, so navigating back to any
+// previously visited page returns the reader to where they left off.
+// Browser back / breadcrumb / "back to ..." links all flow through
+// hashchange, so the same Map serves every navigation direction.
+const scrollPositions = new Map<string, number>();
+let currentHash = location.hash || "#/";
 
 const renderTex = (el: HTMLElement, tex: string, displayMode: boolean) => {
   katex.render(tex, el, { displayMode, throwOnError: false });
@@ -303,8 +305,6 @@ const renderHome = () => {
   attachEqLinkTooltips(app); // eq-link wrappers (registry-driven)
   attachInlineTooltips(app); // data-tip / data-tt-* inline data
   attachAutoTooltips(app); // unwrapped math matching the registry
-
-  window.scrollTo({ top: homeScrollY, behavior: "instant" as ScrollBehavior });
 };
 
 const renderDetail = (path: string[]) => {
@@ -390,8 +390,6 @@ const renderDetail = (path: string[]) => {
   // Interactive widgets (any detail page can declare one)
   const waveSimRoot = document.getElementById("wave-sim");
   if (waveSimRoot) initWaveSim(waveSimRoot);
-
-  window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
 };
 
 const route = () => {
@@ -399,24 +397,27 @@ const route = () => {
   // so its mouseleave will never fire — dismiss the tooltip explicitly.
   hideTooltip();
 
-  const hash = location.hash;
-  const match = hash.match(/^#\/eq\/(.+)$/);
+  // Save the scroll position of the page we're leaving, keyed by the
+  // hash that addressed it. On return — via any path — we read this
+  // back so the reader lands exactly where they were.
+  scrollPositions.set(currentHash, window.scrollY);
+
+  const newHash = location.hash || "#/";
+  currentHash = newHash;
+
+  const match = newHash.match(/^#\/eq\/(.+)$/);
   const path = match ? match[1].split("/").filter(Boolean) : [];
-  const goingToDetail = path.length > 0;
-
-  // Capture the map's scroll position before leaving it for a detail page,
-  // so we can restore it on return.
-  if (lastRouteWasHome && goingToDetail) {
-    homeScrollY = window.scrollY;
-  }
-
-  if (goingToDetail) {
+  if (path.length > 0) {
     renderDetail(path);
-    lastRouteWasHome = false;
   } else {
     renderHome();
-    lastRouteWasHome = true;
   }
+
+  // Restore the scroll position for the page we just arrived at. First
+  // visit → top. Return visit → wherever the reader last was. scrollTo
+  // clamps automatically if the new page is shorter than the saved Y.
+  const saved = scrollPositions.get(newHash) ?? 0;
+  window.scrollTo({ top: saved, behavior: "instant" as ScrollBehavior });
 };
 
 window.addEventListener("hashchange", route);
