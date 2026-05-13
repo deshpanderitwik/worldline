@@ -2690,9 +2690,9 @@ export const homeHTML = `
       <div class="prop-num">16.0</div>
       <p class="prop-body">
         XV gave the real. XVI gave work and the twelve houses.
-        But work in any house &mdash; Opus designing software, Ars
-        composing music, Vinculum holding a hard conversation,
-        Animus tending the wound &mdash; requires more than
+        But work in any house &mdash; designing software,
+        composing music, holding a hard conversation, tending the
+        wound &mdash; requires more than
         <span class="var">&alpha;<sub>i</sub></span> pointing at
         the world. It requires
         <span class="var">&Sscr;<sub>i</sub></span> doing real
