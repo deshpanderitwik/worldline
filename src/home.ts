@@ -1,6 +1,6 @@
 export const homeHTML = `
   <h1 class="glyph">w</h1>
-  <p class="subtitle">an ontology &mdash; v0.26</p>
+  <p class="subtitle">an ontology &mdash; v0.27</p>
 
   <section>
     <h2>I &middot; The symbol</h2>
@@ -2934,17 +2934,6 @@ export const homeHTML = `
       fails first.
     </p>
 
-    <p class="aside">
-      Closing. <span class="var">w</span> is unbounded;
-      <span class="var">i</span> is finite; the map is shorter
-      than the territory and necessarily so. Every section here
-      can be deepened, every variable can be refined, every
-      proposition can be tested against a particular life and
-      found wanting in detail while holding in shape. The work of
-      iterating this document is itself one of the moves it names
-      &mdash; Studium, applied to its own surface. To be continued,
-      in that sense, indefinitely.
-    </p>
   </section>
 
   <section>
