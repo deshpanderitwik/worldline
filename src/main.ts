@@ -4,7 +4,6 @@ import renderMathInElement from "katex/contrib/auto-render";
 import "./style.css";
 import { homeHTML } from "./home.ts";
 import { equations, type Equation } from "./equations.ts";
-import { initWaveSim } from "./wave-sim.ts";
 
 const app = document.getElementById("app")!;
 
@@ -387,9 +386,6 @@ const renderDetail = (path: string[]) => {
   attachInlineTooltips(article);
   attachAutoTooltips(article);
 
-  // Interactive widgets (any detail page can declare one)
-  const waveSimRoot = document.getElementById("wave-sim");
-  if (waveSimRoot) initWaveSim(waveSimRoot);
 };
 
 const route = () => {

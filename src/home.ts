@@ -1,6 +1,6 @@
 export const homeHTML = `
   <h1 class="glyph">w</h1>
-  <p class="subtitle">an ontology &mdash; v0.24</p>
+  <p class="subtitle">an ontology &mdash; v0.25</p>
 
   <section>
     <h2>I &middot; The symbol</h2>
