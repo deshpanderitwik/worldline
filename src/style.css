@@ -76,9 +76,20 @@ p {
 
 .prop {
   display: grid;
-  grid-template-columns: 3rem 1fr;
+  /* minmax(0, 1fr) — without the explicit 0 lower bound, the 1fr track
+     defaults to a minimum of its content's intrinsic width, which lets
+     a wide child (a long display equation, especially) push the track
+     past the viewport. minmax(0, 1fr) makes the track shrinkable, so
+     overflow handling on the child kicks in instead. */
+  grid-template-columns: 3rem minmax(0, 1fr);
   gap: 0.5rem;
   margin: 0 0 1.4rem;
+}
+/* Belt-and-suspenders: grid items also default to min-width: auto, so
+   even with a shrinkable track, an item with intrinsic-wide content can
+   still bulge. Force min-width: 0 on direct prop children. */
+.prop > * {
+  min-width: 0;
 }
 
 .prop-num {
@@ -709,6 +720,6 @@ footer {
     font-size: 6rem;
   }
   .prop {
-    grid-template-columns: 2.2rem 1fr;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
   }
 }
