@@ -1,6 +1,6 @@
 export const homeHTML = `
   <h1 class="glyph">w</h1>
-  <p class="subtitle">an ontology &mdash; v0.25</p>
+  <p class="subtitle">an ontology &mdash; v0.26</p>
 
   <section>
     <h2>I &middot; The symbol</h2>
@@ -2944,6 +2944,359 @@ export const homeHTML = `
       iterating this document is itself one of the moves it names
       &mdash; Studium, applied to its own surface. To be continued,
       in that sense, indefinitely.
+    </p>
+  </section>
+
+  <section>
+    <h2>XVIII &middot; Music</h2>
+
+    <div class="prop">
+      <div class="prop-num">17.0</div>
+      <p class="prop-body">
+        The instrument from XVII is for something. XVI named work;
+        XVII named the simulation recruited to serve work. The
+        natural last question: what is the work itself for?
+      </p>
+      <p class="prop-body">
+        The answer is more specific than 15.7&rsquo;s placeholder
+        of <em>flourishing</em>, and earlier than this section the
+        full shape could not be named. The architecture is in
+        service of the production of <em>music</em> &mdash; across
+        the twelve houses, moment by moment, across years.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 22</span>
+      Let <span class="var">&Mscr;<sub>i</sub></span> denote
+      <em>music</em>: the phenomenon <span class="var">i</span>
+      produces when configuration is right. The literal art form is
+      one instance among many. Clarity on a work problem is another.
+      A room with everything in its place is another. A conversation
+      in which something emerges between people that wasn&rsquo;t
+      there alone is another. The same texture, different materials.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.1</div>
+      <p class="prop-body">
+        <em>The signatures.</em> Music is recognizable across the
+        houses by a consistent felt-texture.
+      </p>
+      <p class="prop-body">
+        <strong>Corpus.</strong> The breath is right, the posture
+        is right, the gait is right. Movement without friction.
+      </p>
+      <p class="prop-body">
+        <strong>Animus.</strong> The wound is met cleanly; the
+        day&rsquo;s emotion integrates in sleep; you wake whole.
+      </p>
+      <p class="prop-body">
+        <strong>Tempus.</strong> The day has rhythm; rest and work
+        alternate in proportion; the week breathes.
+      </p>
+      <p class="prop-body">
+        <strong>Domus.</strong> The apartment exhales. Every object
+        is where it wants to be. Light falls correctly on the
+        surfaces.
+      </p>
+      <p class="prop-body">
+        <strong>Patrimonium.</strong> Enough. Resources flow
+        without anxiety; nothing in the life is starving for lack.
+      </p>
+      <p class="prop-body">
+        <strong>Opus.</strong> The problem suddenly has shape; the
+        next move is obvious; forward motion in the chest.
+      </p>
+      <p class="prop-body">
+        <strong>Ars.</strong> The right notes. The phrase that
+        lands. The image that works. The made thing is more than
+        the parts that went into it.
+      </p>
+      <p class="prop-body">
+        <strong>Studium.</strong> The concept clicks. You can
+        re-derive it from first principles. It stays.
+      </p>
+      <p class="prop-body">
+        <strong>Vinculum.</strong> A conversation in which the
+        other person feels met, you feel met, and something
+        emerges between you that wasn&rsquo;t there alone.
+      </p>
+      <p class="prop-body">
+        <strong>Polis.</strong> Contribution to the larger fabric
+        without exhausting the self.
+      </p>
+      <p class="prop-body">
+        <strong>Naturum.</strong> Time outdoors that re-regulates
+        the body. The awe of altitude, the smell of pine, the
+        indifferent ocean.
+      </p>
+      <p class="prop-body">
+        <strong>Ludus.</strong> Laughter that surprises you. Play
+        that returns you to lightness.
+      </p>
+      <p class="prop-body">
+        Same phenomenon, twelve materials. The felt-texture is what
+        <span class="var">i</span> recognizes as <em>music</em>.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 23</span>
+      Let <span class="var">O<sub>k</sub></span> denote the
+      <em>order</em> of the configuration in house
+      <span class="var">&Hscr;<sub>k</sub></span>:
+      $$O_k \\;=\\; 1 \\;-\\; \\frac{S_k}{S_k^{\\,\\max}} \\;\\in\\; [0, 1]$$
+      The negentropy of <span class="var">&Hscr;<sub>k</sub></span>&rsquo;s
+      configuration, normalized. <span class="var">S<sub>k</sub></span>
+      is the entropy of the current arrangement (Section VII&rsquo;s
+      count: microstates per macrostate);
+      <span class="var">S<sub>k</sub><sup>max</sup></span> is the
+      entropy of the maximally-disordered configuration in that
+      domain. <span class="var">O<sub>k</sub></span> $= 0$ at full
+      chaos; <span class="var">O<sub>k</sub></span> $\\to 1$
+      asymptotically as the configuration is more and more
+      specifically determined.
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 24</span>
+      Let <span class="var">A<sub>k</sub></span> denote the
+      <em>aliveness</em> of the configuration in house
+      <span class="var">&Hscr;<sub>k</sub></span>:
+      $$A_k \\;=\\; \\frac{\\bigl|\\,dS_k^{\\,\\text{ext}} / dt\\,\\bigr|}{A_k^{\\,\\max}} \\;\\in\\; [0, 1]$$
+      The normalized rate at which entropy is being <em>exported</em>
+      from <span class="var">&Hscr;<sub>k</sub></span> to the
+      environment &mdash; how vigorously <span class="var">i</span>
+      is pumping against the second law to maintain order in that
+      house. Direct call-back to 6.6 (the body as entropy pump) and
+      the local-decrease condition. For Prigogine&rsquo;s
+      <em>dissipative structures</em> &mdash; whirlpools, flames,
+      bodies, music being played &mdash;
+      <span class="var">A<sub>k</sub></span> is positive and
+      sustained. For frozen states (a perfect crystal, an immaculate
+      empty apartment, a perfectly transcribed but unread score),
+      <span class="var">A<sub>k</sub></span> $= 0$ regardless of how
+      ordered the configuration is.
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 25</span>
+      Let <span class="var">&kappa;<sub>k</sub></span> denote the
+      <em>coherence</em> of house <span class="var">&Hscr;<sub>k</sub></span>:
+      $$\\kappa_k \\;=\\; O_k \\cdot A_k$$
+      Music in <span class="var">&Hscr;<sub>k</sub></span> requires
+      both order and aliveness. The product structure makes this
+      necessary-AND: if either goes to zero, coherence collapses.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.2</div>
+      <p class="prop-body">
+        <em>Three regimes, made precise.</em>
+      </p>
+      <p class="prop-body">
+        <strong>Chaos &mdash; <span class="var">O<sub>k</sub></span>
+        low, <span class="var">A<sub>k</sub></span> any.</strong>
+        Activity without order. The desk is busy but unproductive.
+        Notes are loud but dissonant. The conversation is energetic
+        but disconnecting. The body is activated but dysregulated.
+        High pumping in a configuration that isn&rsquo;t holding any
+        shape worth pumping.
+      </p>
+      <p class="prop-body">
+        <strong>Frozen &mdash; <span class="var">O<sub>k</sub></span>
+        high, <span class="var">A<sub>k</sub></span> $\\to 0$.</strong>
+        Order without life. Apartment immaculate but empty. Score
+        correct but mechanical. Sentence well-formed but unread. A
+        perfect crystal at absolute zero. Beautiful, possibly &mdash;
+        but dead, and producing nothing.
+      </p>
+      <p class="prop-body">
+        <strong>Music &mdash; <span class="var">O<sub>k</sub></span>
+        high <em>and</em> <span class="var">A<sub>k</sub></span>
+        high.</strong> Order maintained by ongoing flux. The jazz
+        quartet in flow. The right move at the right moment. The
+        body moving skillfully, sustained. The configuration that
+        resonates because it is being held by active work, not
+        frozen by inertia.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.3</div>
+      <p class="prop-body">
+        <em>Total music.</em>
+      </p>
+      $$\\mathcal{M}_i \\;=\\; \\prod_{k=\\mathrm{I}}^{\\mathrm{XII}} \\kappa_k \\;=\\; \\left(\\prod_k O_k\\right) \\cdot \\left(\\prod_k A_k\\right)$$
+      <p class="prop-body">
+        Music in <span class="var">i</span>&rsquo;s life equals the
+        product over the twelve houses of order and the product over
+        the twelve houses of aliveness. Product, not sum, for the
+        same reason flourishing in 15.7 was product-shaped: any one
+        house in chaos or frozen state drags music down across all
+        of them. <span class="var">i</span> cannot make music at the
+        keyboard while the body is in collapse. Conversation does
+        not produce music in a home in disarray. The coupling
+        between houses (15.3) reasserts itself at the level of
+        configuration quality, not just allocation.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.4</div>
+      <p class="prop-body">
+        <em>The entropy question, answered.</em> Is the objective
+        function the reduction of entropy? Yes &mdash; and more.
+      </p>
+      <p class="prop-body">
+        Music <em>is</em> local entropy reduction: the
+        <span class="var">O</span>-side of
+        <span class="var">&kappa;</span> is precisely $1 - S/S^{\\max}$,
+        the negentropy of the local configuration. The wound
+        calcifies and grows (12.3); the world disorders by default
+        (4.2, 6.4). Against these,
+        <span class="var">i</span> produces local order. The body
+        is already doing this autonomically (6.6, the entropy pump);
+        the houses, well-tended, do this at every other scale.
+      </p>
+      <p class="prop-body">
+        But not all local entropy reduction is music. A perfect
+        crystal at absolute zero is maximally ordered and produces
+        nothing &mdash; it is frozen, not music. An immaculate
+        empty apartment has high <span class="var">O</span> and
+        zero <span class="var">A</span>. The wound contracted into
+        rigidity has high <span class="var">O</span> at the cost of
+        aliveness. Music adds the aliveness requirement &mdash;
+        order <em>maintained by ongoing flux</em>, order that
+        <em>resonates</em> rather than just sits. Necessary that
+        entropy go down locally; not sufficient.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.5</div>
+      <p class="prop-body">
+        <em>The chain completes.</em> The whole architecture,
+        viewed from this last vantage:
+      </p>
+      <p class="prop-body">
+        XIV gives the lever. <span class="var">&alpha;<sub>i</sub></span>
+        is the only degree of freedom <span class="var">i</span>
+        has.
+      </p>
+      <p class="prop-body">
+        XV gives the standing place. From the real,
+        <span class="var">&alpha;<sub>i</sub></span> is wielded
+        clean of <span class="var">&xi;<sub>i</sub></span>.
+      </p>
+      <p class="prop-body">
+        XVI gives the work. From the standing place,
+        <span class="var">&alpha;<sub>i</sub></span> is deployed
+        across the twelve houses, by the Hinkie discipline.
+      </p>
+      <p class="prop-body">
+        XVII gives the instrument.
+        <span class="var">&Sscr;<sub>i</sub></span> recruited to
+        serve the work, directed by
+        <span class="var">&alpha;<sub>i</sub></span>, watched by
+        the doorway.
+      </p>
+      <p class="prop-body">
+        XVIII gives the reason. The instrument is for the
+        production of music. That is what the work is for. That is
+        what the houses serve. That is what
+        <span class="var">i</span> is here to do.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.6</div>
+      <p class="prop-body">
+        <em>Music and flourishing.</em>
+        <span class="var">F</span> (15.7) measured the
+        <em>quantity</em> of attention allocation across the houses
+        &mdash; how well-distributed the time and effort were.
+        <span class="var">&Mscr;<sub>i</sub></span> measures the
+        <em>quality</em> of configuration within each house
+        &mdash; how coherently the activity in that house
+        resonates. Both matter, and they multiply.
+      </p>
+      <p class="prop-body">
+        A life can have well-allocated attention (high
+        <span class="var">F</span>) but produce dead activity (low
+        <span class="var">&Mscr;<sub>i</sub></span>): twelve houses
+        tended dutifully but without music in any of them. A life
+        can have intense music in one house (high
+        <span class="var">&kappa;<sub>k</sub></span>) but neglect
+        the others (low <span class="var">F</span>): the artist
+        who creates beauty while their body breaks; the founder
+        who builds but cannot love.
+      </p>
+      <p class="prop-body">
+        The complete picture is high <span class="var">F</span>
+        <em>and</em> high <span class="var">&Mscr;<sub>i</sub></span>:
+        well-distributed attention producing music across all twelve
+        houses. Allocation and configuration, both right.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">17.7</div>
+      <p class="prop-body">
+        <em>Why music.</em> Music is what life looks like when the
+        architecture is operating well. Not survival &mdash; that
+        is substrate. Not flourishing in the abstract &mdash; that
+        is the macroscopic placeholder. Music is what happens at
+        the microscopic level, moment by moment, when configuration
+        is right.
+      </p>
+      <p class="prop-body">
+        The wound calcifies by default (12.3). The houses go
+        untended without discipline (15.4). The simulation captures
+        attention (13.2). Against all that,
+        <span class="var">i</span> produces music. Some moments,
+        some hours, some seasons. Occasionally a life that
+        accumulates more music than not.
+      </p>
+      <p class="prop-body">
+        This is the answer to <em>what is the instrument for.</em>
+        This is the reason the architecture exists. This is what
+        the whole document has been building toward.
+      </p>
+    </div>
+
+    <p class="aside">
+      The body version. Music is bodily end to end. Aliveness
+      <span class="var">A<sub>k</sub></span> is energetic substrate
+      &mdash; the body&rsquo;s capacity to sustain entropy export
+      depends on sleep, nutrition, autonomic regulation, all of
+      Corpus. Order <span class="var">O<sub>k</sub></span> depends
+      on cognitive clarity, which depends on the same autonomic
+      state via the multiple-demand network (13.1). The felt
+      signatures of music &mdash; the click in the chest, the
+      breath that lands, the somatic warmth of a configuration that
+      fits &mdash; are body events. There is no music separable
+      from the body producing it. Tend the body and music becomes
+      possible across every house; neglect it and music becomes
+      impossible regardless of how hard
+      <span class="var">i</span> tries elsewhere.
+    </p>
+
+    <p class="aside">
+      The end. The document closes here. The architecture has been
+      named: <span class="var">w</span>; <span class="var">i</span>;
+      time, change, entropy, boundary, sensation, simulation, its
+      contents, the world within, the wound; the lever, the real,
+      work, the instrument, music. Eighteen sections, twenty-five
+      definitions, more propositions than were planned, more
+      footholds than were imagined at the start. None of it makes
+      the work easy. All of it makes the work
+      <em>intelligible</em>. The rest is what
+      <span class="var">i</span> does with it, one day at a time,
+      in the body that is, in the <span class="var">w</span> that
+      is. Producing music is what <span class="var">i</span> is
+      here to do. Now go and make it.
     </p>
   </section>
 

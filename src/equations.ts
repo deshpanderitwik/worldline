@@ -1501,6 +1501,54 @@ $$k_B \\;\\approx\\; 1.381 \\times 10^{-23} \\;\\text{J/K}$$
         "The reverse of the wound&rsquo;s vicious cycle from 12.7. Attention on the body regulates the autonomic configuration; the regulated body raises channel clarity; rising clarity thins the simulation; the thinner simulation frees more attention from capture. Each lap makes the next easier. Practiced often enough, recovery becomes faster than degradation.",
     },
   },
+  "order-definition": {
+    id: "order-definition",
+    tex: "O_k \\;=\\; 1 \\;-\\; \\frac{S_k}{S_k^{\\,\\max}} \\;\\in\\; [0, 1]",
+    tooltip: {
+      pronunciation:
+        "O sub k equals one minus S sub k over S sub k max, in the closed interval zero to one",
+      symbols:
+        "$O_k$ is the order of the configuration in house $k$; $S_k$ is the entropy of the current arrangement; $S_k^{\\max}$ is the entropy of the maximally-disordered configuration in that domain.",
+      context:
+        "Order as normalized negentropy. $O_k = 0$ at full chaos (every configuration equally likely); $O_k \\to 1$ asymptotically as the configuration becomes more and more specifically determined. Direct application of Section VII&rsquo;s entropy count, scoped to a single house&rsquo;s domain.",
+    },
+  },
+  "aliveness-definition": {
+    id: "aliveness-definition",
+    tex: "A_k \\;=\\; \\frac{\\bigl|\\,dS_k^{\\,\\text{ext}} / dt\\,\\bigr|}{A_k^{\\,\\max}} \\;\\in\\; [0, 1]",
+    tooltip: {
+      pronunciation:
+        "A sub k equals the absolute value of d S k external by d t, over A sub k max, in the closed interval zero to one",
+      symbols:
+        "$A_k$ is the aliveness of house $k$; $dS_k^{\\text{ext}}/dt$ is the rate at which entropy is being exported from the house to the environment; $A_k^{\\max}$ is a normalizing maximum sustainable rate.",
+      context:
+        "Aliveness as normalized entropy-export rate &mdash; how vigorously $i$ is pumping against the second law to maintain order in this house. Calls back to 6.6 (the body as entropy pump). Prigogine&rsquo;s dissipative structures (whirlpools, flames, bodies, music being played) have positive sustained $A_k$. Frozen states (crystal at absolute zero, immaculate empty room) have $A_k = 0$ regardless of how ordered they are.",
+    },
+  },
+  "coherence-definition": {
+    id: "coherence-definition",
+    tex: "\\kappa_k \\;=\\; O_k \\cdot A_k",
+    tooltip: {
+      pronunciation:
+        "kappa sub k equals O sub k times A sub k",
+      symbols:
+        "$\\kappa_k$ is the coherence of house $k$; $O_k$ is order; $A_k$ is aliveness. The product structure makes the requirement necessary-AND.",
+      context:
+        "Music in a house requires both order AND aliveness. If either drops to zero, $\\kappa_k$ collapses. Captures the three regimes: chaos (low $O$), frozen (low $A$), music (both high).",
+    },
+  },
+  "music-total": {
+    id: "music-total",
+    tex: "\\mathcal{M}_i \\;=\\; \\prod_{k=\\mathrm{I}}^{\\mathrm{XII}} \\kappa_k \\;=\\; \\left(\\prod_k O_k\\right) \\cdot \\left(\\prod_k A_k\\right)",
+    tooltip: {
+      pronunciation:
+        "M-script sub i equals the product over k from I to XII of kappa sub k, which equals the product of O sub k times the product of A sub k",
+      symbols:
+        "$\\mathcal{M}_i$ is the music produced in $i$&rsquo;s life; the product runs over all twelve houses; the right-hand side decomposes into total order across houses times total aliveness across houses.",
+      context:
+        "Music as the product of coherences across the twelve houses. Product, not sum, because any single house in chaos or frozen state drags music down across all of them &mdash; same broken-window logic as 15.7&rsquo;s flourishing collapse, but applied to quality of configuration rather than quantity of allocation. The complete objective the instrument serves.",
+    },
+  },
   "instrument-master-mode": {
     id: "instrument-master-mode",
     tex: "\\mathcal{S}_i \\;\\longrightarrow\\; \\alpha_i",
