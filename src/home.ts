@@ -1,6 +1,6 @@
 export const homeHTML = `
   <h1 class="glyph">w</h1>
-  <p class="subtitle">an ontology &mdash; v0.18</p>
+  <p class="subtitle">an ontology &mdash; v0.21</p>
 
   <section>
     <h2>I &middot; The symbol</h2>
@@ -2026,6 +2026,924 @@ export const homeHTML = `
       others. There is no
       <span class="var">&alpha;<sub>i</sub></span> work that is not
       also body work.
+    </p>
+  </section>
+
+  <section>
+    <h2>XV &middot; The real</h2>
+
+    <div class="prop">
+      <div class="prop-num">14.0</div>
+      <p class="prop-body">
+        Section XIV closed with the contest
+        <span class="var">&alpha;<sub>i</sub></span>
+        <span class="nowrap">$\\rightleftarrows$</span>
+        <span class="var">&Sscr;<sub>i</sub></span>. When the
+        contest tilts toward
+        <span class="var">&Sscr;<sub>i</sub></span>,
+        <span class="var">i</span> remains captured &mdash; the
+        condition we will call <em>the imaginal</em>. When the
+        contest tilts toward
+        <span class="var">&alpha;<sub>i</sub></span>, the beam
+        pierces the simulation and reaches through to
+        <span class="var">&sigma;<sub>i</sub></span>. That second
+        condition is the state we now name.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 17</span>
+      Let <em>the real</em> denote the state of
+      <span class="var">i</span> in which
+      <span class="var">&alpha;<sub>i</sub></span> has pierced
+      <span class="var">&Sscr;<sub>i</sub></span> sufficiently for
+      <span class="var">&sigma;<sub>i</sub></span> to deliver
+      <span class="var">w</span> with low filter. The real is a
+      <em>configuration</em>, not a location; a <em>regime</em>,
+      not a destination. <span class="var">i</span> is always
+      either more in it or less.
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 18</span>
+      Let <span class="var">c<sub>i</sub></span> denote channel
+      clarity: the magnitude of the penetration on a normalized
+      scale.
+      $$c_i \\;\\in\\; [0, 1]$$
+      <span class="var">c<sub>i</sub></span> $= 0$ is full capture
+      by <span class="var">&Sscr;<sub>i</sub></span> &mdash; the
+      deep imaginal. <span class="var">c<sub>i</sub></span> $\\to 1$
+      is the asymptote of pure contact with
+      <span class="var">w</span> via
+      <span class="var">&sigma;<sub>i</sub></span>.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.1</div>
+      <p class="prop-body">
+        <em>The imaginal and the real are two regimes of one
+        variable.</em> Not separate states but the two ends of the
+        <span class="var">c<sub>i</sub></span> axis. Every
+        <span class="var">i</span> lives somewhere on this axis at
+        every moment, and the location is rarely stable for long.
+      </p>
+      <p class="prop-body">
+        The upper bound is strict.
+      </p>
+      $$c_i \\;<\\; 1 \\quad \\forall\\, t$$
+      <p class="prop-body">
+        Pure unmediated contact with <span class="var">w</span> is
+        unreachable. The sensorium narrows
+        (<a class="eq-ref" data-eq="em-radiation">EM radiation</a>
+        and <a class="eq-ref" data-eq="pressure-waves">pressure
+        waves</a> in tiny bands), construction is unavoidable (8.2),
+        and <span class="var">&wcirc;<sub>i</sub></span>&rsquo;s
+        priors always shape what gets through (11.6). What is
+        asymptotically approached is <span class="var">w</span>
+        with the filter as thin as <span class="var">i</span>&rsquo;s
+        apparatus permits &mdash; but never zero filter. The real
+        is a direction, not an arrival.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.2</div>
+      <p class="prop-body">
+        <em>The doorway is the body.</em> The single most reliable
+        operation for raising <span class="var">c<sub>i</sub></span>
+        is to direct <span class="var">&alpha;<sub>i</sub></span>
+        at <span class="var">&sigma;<sub>i</sub></span>.
+      </p>
+      $$\\alpha_i \\;\\longrightarrow\\; \\sigma_i \\;\\;\\Longrightarrow\\;\\; \\frac{dc_i}{dt} \\;>\\; 0$$
+      <p class="prop-body">
+        Breath at the nostrils. Weight on the chair. Sound in the
+        room. Fingers on the keys. Any sensory anchor will do; the
+        body is always available, always present, always running
+        the next moment of <span class="var">&sigma;<sub>i</sub></span>
+        out into <span class="var">i</span>. The simulation is
+        theme-shaped and verbal and abstract; the body is local
+        and surface and now. When
+        <span class="var">&alpha;<sub>i</sub></span> finds the
+        surface, the channel cracks.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.3</div>
+      <p class="prop-body">
+        <em>The signatures appear above a threshold.</em>
+        <span class="var">c<sub>i</sub></span> is continuous, but
+        the experiential markers of the real do not arrive
+        gradually. They kick in around some threshold
+        <span class="var">c<sub>i</sub></span><sup>*</sup>.
+      </p>
+      $$c_i \\;\\geq\\; c_i^{\\,*} \\;\\;\\Longrightarrow\\;\\; \\text{signatures}_i$$
+      <p class="prop-body">
+        The signatures, consistently reported across traditions and
+        first-person inquiry:
+      </p>
+      <p class="prop-body">
+        <strong>Vividness.</strong> Ordinary perception sharpens.
+        Colours saturate. Edges become distinct. Sound has more
+        body.
+      </p>
+      <p class="prop-body">
+        <strong>Beauty in ordinary things.</strong> The light on a
+        wall. The grain of wood. The face of someone familiar. The
+        world acquires a quality of being-just-as-it-is that does
+        not require anything to be different.
+      </p>
+      <p class="prop-body">
+        <strong>Somatic well-being.</strong> The body responds.
+        Breath deepens, muscles soften, the autonomic configuration
+        moves toward ventral. A felt sense of <em>okayness</em>
+        that does not depend on anything happening.
+      </p>
+      <p class="prop-body">
+        <strong>The cool of not-pulled.</strong>
+        <span class="var">&Sscr;<sub>i</sub></span> may still be
+        running &mdash; sometimes loudly &mdash; but
+        <span class="var">&alpha;<sub>i</sub></span> is no longer
+        captured by it. There is daylight between
+        <span class="var">i</span> and the simulation.
+      </p>
+      <p class="prop-body">
+        These are empirical markers, not metaphysical claims. They
+        are what people report when
+        <span class="var">c<sub>i</sub></span> crosses the
+        threshold. If they are not present,
+        <span class="var">i</span> is probably still below it.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.4</div>
+      <p class="prop-body">
+        <em>The counter-loop.</em> Where 12.7 gave the wound&rsquo;s
+        vicious cycle &mdash;
+        <span class="var">&xi;<sub>i</sub></span>
+        $\\to$ <span class="var">&Sscr;<sub>i</sub></span>
+        $\\to$ <span class="var">body<sub>i</sub></span>
+        $\\to$ <span class="var">&xi;<sub>i</sub></span>
+        &mdash; the real runs the reverse:
+      </p>
+      $$\\alpha_i \\;\\to\\; \\sigma_i \\;\\to\\; \\text{body}_i^{\\,\\text{regulated}} \\;\\to\\; c_i^{\\,\\uparrow} \\;\\to\\; \\mathcal{S}_i^{\\,\\downarrow} \\;\\to\\; \\alpha_i^{\\,\\text{free}} \\;\\to\\; \\ldots$$
+      <p class="prop-body">
+        Each step makes the next easier.
+        <span class="var">&alpha;<sub>i</sub></span> on the body
+        regulates the autonomic configuration; the regulated body
+        raises <span class="var">c<sub>i</sub></span>; rising
+        <span class="var">c<sub>i</sub></span> thins
+        <span class="var">&Sscr;<sub>i</sub></span>; thinner
+        <span class="var">&Sscr;<sub>i</sub></span> frees more
+        <span class="var">&alpha;<sub>i</sub></span> from capture;
+        the freed <span class="var">&alpha;<sub>i</sub></span> can
+        sustain the next round. A virtuous cycle in the opposite
+        direction of the wound&rsquo;s. Practiced often enough, the
+        loop&rsquo;s default speed reverses:
+        <span class="var">&xi;<sub>i</sub></span> still activates,
+        but recovery becomes faster than degradation.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.5</div>
+      <p class="prop-body">
+        <em>The stance.</em> Once
+        <span class="var">c<sub>i</sub></span> is past the
+        threshold, <span class="var">&Sscr;<sub>i</sub></span>
+        becomes visible <em>as</em>
+        <span class="var">&Sscr;<sub>i</sub></span> &mdash; an
+        object of observation rather than the medium of identity.
+        The architectural fact behind this is small and important:
+      </p>
+      $$\\mathcal{S}_i \\;\\subsetneq\\; i$$
+      <p class="prop-body">
+        The simulation is a proper subset of
+        <span class="var">i</span>, not all of it. When
+        <span class="var">&alpha;<sub>i</sub></span> illuminates
+        <span class="var">&Sscr;<sub>i</sub></span>, what holds the
+        illumination is what is left of
+        <span class="var">i</span> after
+        <span class="var">&Sscr;<sub>i</sub></span> has been set
+        aside as object. The stance has a name in the lived
+        register: <em>yeah, there it is.</em> Not pushing
+        <span class="var">&Sscr;<sub>i</sub></span> away, not
+        fixing <span class="var">&xi;<sub>i</sub></span>, not
+        trying to make the pain stop. Just seeing the simulation
+        from a place that is not it.
+      </p>
+      <p class="prop-body">
+        A lived instance. Sitting at a laptop. The body in pain.
+        <span class="var">&Sscr;<sub>i</sub></span> generating
+        wound-tuned content &mdash; loss, longing, shattered hope,
+        the conviction of being born inferior.
+        <span class="var">&xi;<sub>i</sub></span> doing exactly
+        what <span class="var">&xi;<sub>i</sub></span> does.
+        <span class="var">&alpha;<sub>i</sub></span> directs
+        itself, anchored on the fingers typing keys &mdash;
+        <span class="var">&sigma;<sub>i</sub></span>, the doorway.
+        <span class="var">c<sub>i</sub></span> rises across the
+        threshold. From the new vantage,
+        <span class="var">&Sscr;<sub>i</sub></span> is visible as
+        what it is: corrupted, hijacked, themed by the wound. The
+        pain has not gone anywhere. But
+        <span class="var">i</span> is no longer <em>being</em> the
+        pain. <em>Yeah, there it is.</em> The work, in real time.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">14.6</div>
+      <p class="prop-body">
+        <em>The standing place.</em> The real is not a goal. It is
+        the configuration from which the next move is chosen
+        rather than fired by <span class="var">&xi;<sub>i</sub></span>.
+        Everything that follows in this document &mdash; the work
+        of XVI, the recruit of XVII &mdash; assumes the standing
+        place. Action taken from the imaginal is action driven by
+        the wound, even when it looks productive on the surface.
+        Action taken from the real is action that
+        <span class="var">i</span> chose. The latter is the only
+        kind that lasts in a way <span class="var">i</span> can
+        live with.
+      </p>
+    </div>
+
+    <p class="aside">
+      A note on naming. <em>The real</em> is borrowed deliberately
+      from common speech &mdash; <em>get real</em>, <em>the real
+      thing</em>, <em>for real</em>. The everyday phrase already
+      tracks the distinction we are formalizing: a state of contact
+      with what is, as opposed to a state of being lost in
+      something else. We mark the variable formally with
+      <span class="var">c<sub>i</sub></span>, but the felt
+      reference is what people have always meant by the word.
+    </p>
+
+    <p class="aside">
+      The body version.
+      <span class="var">c<sub>i</sub></span> is set in the body.
+      Every channel that thins
+      <span class="var">&Sscr;<sub>i</sub></span> or strengthens
+      <span class="var">&alpha;<sub>i</sub></span> runs through
+      tissue: sleep, breath, movement, regulated touch, time
+      outdoors, sufficient nutrition, contact with regulated
+      others, presence-based practice. There is no
+      <span class="var">c<sub>i</sub></span>-raising operation
+      that is not also a body operation. This is why every other
+      section has had a body version, and why this one closes the
+      arc: the real is where the body has been pointing all along.
+    </p>
+  </section>
+
+  <section>
+    <h2>XVI &middot; Work</h2>
+
+    <div class="prop">
+      <div class="prop-num">15.0</div>
+      <p class="prop-body">
+        Section XV closed by naming the real as the standing-place
+        from which work happens. The natural next question:
+        <em>what does <span class="var">i</span> do with
+        <span class="var">&alpha;<sub>i</sub></span>?</em> Once the
+        lever exists and the standing-place is reached, where does
+        <span class="var">&alpha;<sub>i</sub></span> go? The answer
+        articulated across this section is <em>work</em> &mdash;
+        and the term wants a definition sharp enough to exclude
+        most of what gets called work and include much that does
+        not.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 19</span>
+      Let <em>work</em> denote the sustained intentional deployment
+      of <span class="var">&alpha;<sub>i</sub></span> that leaves
+      lasting trace in <span class="var">w</span>.
+      <em>Sustained</em> &mdash; not flickering.
+      <em>Intentional</em> &mdash; not captured.
+      <em>Lasting trace</em> &mdash; not consuming attention
+      without consequence. What survives all three filters is what
+      counts.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.1</div>
+      <p class="prop-body">
+        <em>Two levels of work.</em> Definition 19 names
+        <em>intentional</em> work &mdash; what
+        <span class="var">&alpha;<sub>i</sub></span> deploys
+        toward. But there is another work, always running
+        underneath: the body&rsquo;s. Heart pumping. Kidneys
+        filtering. Immune patrol. Cellular repair. Hormonal
+        regulation. Memory consolidation overnight. Autonomic
+        governance of every breath, every digestion, every wound
+        healing. The body is the most prolific worker
+        <span class="var">i</span> contains, and it does not stop.
+      </p>
+      $$\\alpha_i \\;=\\; 0 \\;\\;\\not\\Rightarrow\\;\\; \\text{work}_i \\;=\\; 0$$
+      <p class="prop-body">
+        There is no such thing as not working, while alive. Rest
+        is not the <em>absence</em> of work but its
+        <em>prioritization</em> &mdash; when
+        <span class="var">&alpha;<sub>i</sub></span> subsides,
+        body-work gets the system to itself. Sleep is the most
+        demanding work the body does: tissue repair, memory
+        consolidation, metabolic clearance, immune calibration,
+        integration of the day&rsquo;s input. Lying still is not
+        idleness; it is body-work proceeding under conditions where
+        it can finally proceed.
+      </p>
+      <p class="prop-body">
+        The implication for the houses below: <em>working any
+        house well includes resting it well.</em> Corpus needs
+        sleep more than it needs another cardio session. Opus
+        needs the body&rsquo;s overnight consolidation more than
+        tomorrow&rsquo;s extra hour at the keyboard. Animus
+        depends on regulated sleep to complete the day&rsquo;s
+        emotional integration. The autonomic body-work the houses
+        depend on is what gets done <em>between</em> intentional
+        sessions &mdash; and starving it collapses everything that
+        runs on top of it.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 20</span>
+      Let <span class="var">&Hscr;</span> denote the set of twelve
+      houses of work.
+      $$\\mathcal{H} \\;=\\; \\{\\,\\mathcal{H}_{\\mathrm{I}},\\; \\mathcal{H}_{\\mathrm{II}},\\; \\ldots,\\; \\mathcal{H}_{\\mathrm{XII}}\\,\\}$$
+      The twelve, named:
+      I.&nbsp;<strong>Corpus</strong> &middot;
+      II.&nbsp;<strong>Animus</strong> &middot;
+      III.&nbsp;<strong>Tempus</strong> &middot;
+      IV.&nbsp;<strong>Domus</strong> &middot;
+      V.&nbsp;<strong>Patrimonium</strong> &middot;
+      VI.&nbsp;<strong>Opus</strong> &middot;
+      VII.&nbsp;<strong>Ars</strong> &middot;
+      VIII.&nbsp;<strong>Studium</strong> &middot;
+      IX.&nbsp;<strong>Vinculum</strong> &middot;
+      X.&nbsp;<strong>Polis</strong> &middot;
+      XI.&nbsp;<strong>Naturum</strong> &middot;
+      XII.&nbsp;<strong>Ludus</strong>.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.2</div>
+      <p class="prop-body">
+        <em>The houses, with scope.</em>
+      </p>
+      <p class="prop-body">
+        <strong>I &middot; Corpus.</strong> The body. Sleep,
+        nutrition, movement (strength, cardio, mobility), recovery,
+        hygiene, medical maintenance, sexual and hormonal health,
+        substance management. <em>Failure mode:</em> substrate
+        erosion that bleeds capacity from every other house.
+      </p>
+      <p class="prop-body">
+        <strong>II &middot; Animus.</strong> The inner architecture.
+        <span class="var">&xi;<sub>i</sub></span> metabolism;
+        <span class="var">&alpha;<sub>i</sub></span> training;
+        <span class="var">c<sub>i</sub></span> sustaining; emotional
+        intelligence; self-knowledge; existential reckoning.
+        <em>Failure mode:</em>
+        <span class="var">&xi;<sub>i</sub></span> takeover &mdash;
+        the loop of 12.7 runs unchecked.
+      </p>
+      <p class="prop-body">
+        <strong>III &middot; Tempus.</strong> Time and rhythm. Daily
+        cadence, weekly cycle, seasonal pulse, sabbath, retreat,
+        observances. <em>Failure mode:</em> arrhythmia &mdash;
+        activities may all be present but stripped of rhythm and so
+        failing to compound.
+      </p>
+      <p class="prop-body">
+        <strong>IV &middot; Domus.</strong> The dwelling. Cooking,
+        cleaning, order, repair, plants, pets, aesthetic
+        environment, the daily inhabitation of the home.
+        <em>Failure mode:</em> the room becomes punishment instead
+        of refuge.
+      </p>
+      <p class="prop-body">
+        <strong>V &middot; Patrimonium.</strong> Provision. Income,
+        savings, investment, debt, insurance, housing,
+        transportation, tools, possessions. <em>Failure mode:</em>
+        material precarity that captures
+        <span class="var">&alpha;<sub>i</sub></span> with
+        survival-anxiety.
+      </p>
+      <p class="prop-body">
+        <strong>VI &middot; Opus.</strong> Vocation. The
+        manifestation work fitted to <span class="var">i</span>&rsquo;s
+        shape &mdash; where <span class="var">w</span> led
+        <span class="var">i</span>. Skill development, tool mastery,
+        professional community, reputation, mentorship.
+        <em>Failure mode:</em> drift; the gift goes undeployed.
+      </p>
+      <p class="prop-body">
+        <strong>VII &middot; Ars.</strong> Creative expression.
+        Making whose value is in the making. Music, writing, craft,
+        art, performance. Lineage and study of masters,
+        collaboration, audience. <em>Failure mode:</em> the channel
+        through which the body sings goes silent.
+      </p>
+      <p class="prop-body">
+        <strong>VIII &middot; Studium.</strong> Learning. Reading,
+        study, skill acquisition outside vocation, languages,
+        conversation with sharper minds, knowledge of history and
+        science and context. <em>Failure mode:</em> ossification;
+        <span class="var">&wcirc;<sub>i</sub></span> stops updating.
+      </p>
+      <p class="prop-body">
+        <strong>IX &middot; Vinculum.</strong> Bonds. Intimate
+        partner; family of origin; chosen family; close friendships;
+        wider friendships; neighbours; professional ties; mentor
+        and mentee relationships; community. The work of
+        attunement, repair, presence, reciprocity, vulnerability.
+        <em>Failure mode:</em> isolation &mdash; the social fabric
+        thins until <span class="var">i</span> is operating without
+        co-regulation, where
+        <span class="var">&xi;<sub>i</sub></span> compounds fastest.
+      </p>
+      <p class="prop-body">
+        <strong>X &middot; Polis.</strong> The civic and
+        collective. Political engagement, volunteering,
+        environmental responsibility, contribution to public goods,
+        awareness of the larger context
+        <span class="var">i</span> is embedded in.
+        <em>Failure mode:</em> civic atrophy;
+        <span class="var">i</span> becomes a private resource pool
+        drawing on a commons it does not replenish.
+      </p>
+      <p class="prop-body">
+        <strong>XI &middot; Naturum.</strong> The wild. Nature,
+        time outdoors, non-human life, cosmos, seasons, place,
+        rootedness. <em>Failure mode:</em> the perceptual diet
+        narrows to the human-made; awe and proportion fade;
+        <span class="var">c<sub>i</sub></span> loses its cheapest
+        pathway upward.
+      </p>
+      <p class="prop-body">
+        <strong>XII &middot; Ludus.</strong> Play. Hobbies, games,
+        travel, adventure, aesthetic consumption (art, film, music,
+        literature for joy), humour, lightness, foolishness.
+        <em>Failure mode:</em> grimness &mdash; every other house
+        is worked at the cost of joy, and the work without joy is
+        eventually abandoned.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.3</div>
+      <p class="prop-body">
+        <em>At any moment,
+        <span class="var">&alpha;<sub>i</sub></span> is deployed to
+        exactly one house.</em> The one-at-a-time constraint from
+        XIV.
+      </p>
+      $$\\alpha_i(t) \\;\\in\\; \\mathcal{H}_k \\;\\;\\text{for some unique } k$$
+      <p class="prop-body">
+        Over a time window &mdash; a day, a week, a season, a life
+        &mdash; <span class="var">i</span>&rsquo;s deployments
+        form a distribution over the houses. We name this the
+        <em>allocation profile</em>:
+      </p>
+      $$\\mu_i: \\mathcal{H} \\to [0, 1], \\quad \\sum_{k=\\mathrm{I}}^{\\mathrm{XII}} \\mu_i(\\mathcal{H}_k) \\;=\\; 1$$
+      <p class="prop-body">
+        The shape of a life is the shape of its
+        <span class="var">&mu;<sub>i</sub></span>. Different
+        <span class="var">i</span>&rsquo;s have radically different
+        profiles; the same <span class="var">i</span> at different
+        life stages has different profiles. The profile is the
+        first place neglect shows: a house at near-zero allocation
+        is a house in slow collapse.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.4</div>
+      <p class="prop-body">
+        <em>Each house has a maintenance threshold</em> &mdash; a
+        floor below which the house begins to degrade.
+      </p>
+      $$\\mu_i(\\mathcal{H}_k) \\;\\geq\\; m_k$$
+      <p class="prop-body">
+        Sleep too little, the body breaks down. Skip relationship
+        maintenance, the bonds wither. Stop tending the wound,
+        <span class="var">&xi;<sub>i</sub></span> recompounds.
+        Without the wild, <span class="var">c<sub>i</sub></span>
+        sinks. Each
+        <span class="var">m<sub>k</sub></span> is real and is
+        non-zero; none of the houses is optional.
+      </p>
+      <p class="prop-body">
+        The houses are <em>coupled</em>. Decay in one bleeds into
+        the others: a broken body undermines vocation, depleted
+        bonds hollow out creative work, sleep deprivation collapses
+        attention. Below threshold in one house is, in time, below
+        threshold in all of them. The damage is never local for
+        long.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.5</div>
+      <p class="prop-body">
+        <em>The Hinkie stance.</em> Do not optimize any single
+        house. Do not neglect any.
+      </p>
+      $$\\mu_i(\\mathcal{H}_k) \\;>\\; 0 \\quad \\forall\\, k$$
+      <p class="prop-body">
+        The strict positivity says: every house gets non-zero
+        <span class="var">&alpha;<sub>i</sub></span>. Marginal
+        compounding gains across twelve dimensions outperform
+        heroic gains in one, because the latter typically come at
+        the cost of another house&rsquo;s threshold, which collapses
+        the whole. Process over outcome; distribution over peak;
+        twelve fronts, not one.
+      </p>
+      <p class="prop-body">
+        This is also an anti-<span class="var">&xi;<sub>i</sub></span>
+        strategy. <a class="eq-ref" data-eq="wound-saturation"><span class="var">&xi;<sub>i</sub></span>
+        wins by saturating <span class="var">&alpha;<sub>i</sub></span>
+        through concentration on a small number of obsessions</a>.
+        If
+        <span class="var">&alpha;<sub>i</sub></span> is distributed
+        across twelve surfaces,
+        <span class="var">&xi;<sub>i</sub></span> has twelve fronts
+        to defend against and cannot saturate them all. The
+        diversification of effort is itself defence. Build the life
+        the wound has to operate inside; let the life crowd it out.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.6</div>
+      <p class="prop-body">
+        <em>From the imaginal, from the real.</em> The same work
+        &mdash; the same hour at the keyboard, the same
+        conversation, the same set of weights &mdash; done from two
+        different states is two categorically different things.
+      </p>
+      <p class="prop-body">
+        <strong>From the imaginal.</strong>
+        <span class="var">&xi;<sub>i</sub></span> drives. The hour
+        at the keyboard is escape from anxiety. The conversation is
+        performance. The weights are punishment of the body that
+        failed. The work proceeds, sometimes successfully, but it
+        accumulates without flourishing &mdash; because what is
+        being served is the wound, not the life.
+      </p>
+      <p class="prop-body">
+        <strong>From the real.</strong>
+        <span class="var">&alpha;<sub>i</sub></span> has cleared
+        <span class="var">&Sscr;<sub>i</sub></span>. The hour at the
+        keyboard is craft. The conversation is contact. The weights
+        are tending. The same surface activity in a register that
+        is its own reward. This is what XV named
+        <em>celebration</em>.
+      </p>
+      <p class="prop-body">
+        The houses do not change. The register does.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">15.7</div>
+      <p class="prop-body">
+        <em>Flourishing.</em> Define
+        <span class="var">F</span> as a function of
+        <span class="var">i</span>&rsquo;s allocation profile.
+      </p>
+      $$F: \\mu_i \\;\\mapsto\\; \\mathbb{R}_{\\geq 0}$$
+      <p class="prop-body">
+        Two properties characterize <span class="var">F</span>.
+      </p>
+      <p class="prop-body">
+        <strong>Threshold collapse.</strong>
+      </p>
+      $$\\exists\\, k : \\mu_i(\\mathcal{H}_k) < m_k \\;\\;\\Longrightarrow\\;\\; F(\\mu_i) \\to 0$$
+      <p class="prop-body">
+        No amount of investment in the other houses compensates for
+        one house in collapse. Flourishing is not an average; it is
+        closer to a product, and any single zero zeroes it out.
+      </p>
+      <p class="prop-body">
+        <strong>Diminishing returns above threshold.</strong> Once
+        <span class="var">&mu;<sub>i</sub></span>(<span class="var">&Hscr;<sub>k</sub></span>)
+        is above <span class="var">m<sub>k</sub></span>, additional
+        allocation to that house increases
+        <span class="var">F</span> but with diminishing marginal
+        returns. There is no house whose hypertrophy compensates
+        for another house&rsquo;s neglect.
+      </p>
+      <p class="prop-body">
+        Two consequences. First: <em>flourishing is bounded above
+        by the weakest house.</em> Raising the floor matters more
+        than raising the ceiling. Second: <em>the work is portfolio
+        work, not specialist work.</em> The discipline is in
+        keeping twelve plates spinning, not in lifting any one of
+        them higher than necessary.
+      </p>
+    </div>
+
+    <p class="aside">
+      A note on naming. The Latin is not ornament. Each name is
+      technically chosen: <em>Corpus</em> for the body as a unified
+      thing; <em>Animus</em> for the active inner agent rather
+      than <em>anima</em>, the more passive soul; <em>Tempus</em>
+      rather than <em>Hora</em> because time is rhythm not hour;
+      <em>Domus</em> for the inhabitable dwelling;
+      <em>Patrimonium</em> for the estate that is held and passed
+      on; <em>Opus</em> for the manifesting work that leaves a
+      thing behind; <em>Ars</em> for the technical and the made
+      beautiful; <em>Studium</em> for sustained study with desire
+      in it; <em>Vinculum</em> for bond as something that
+      <em>ties</em>; <em>Polis</em> for the political-as-collective
+      in the pre-modern sense; <em>Naturum</em> for the non-human
+      living; <em>Ludus</em> for play that is both game and school.
+      Each name is doing technical work; together they make the
+      surface on which work happens.
+    </p>
+
+    <p class="aside">
+      The body version. Every house has a body component. Corpus
+      is obvious. But Animus runs on neural metabolism; Tempus is
+      enforced by circadian rhythm; Domus is the body&rsquo;s
+      immediate spatial substrate; Patrimonium provides the
+      resources the body needs; Opus exhausts the body and demands
+      recovery; Ars finds the body&rsquo;s expressive channels;
+      Studium depends on prefrontal capacity; Vinculum is mediated
+      by vagal tone and touch; Polis demands stamina; Naturum
+      re-regulates the autonomic baseline; Ludus discharges
+      accumulated tension. The body is in every house and every
+      house is in the body. Tend the body and every house gets
+      easier to maintain.
+    </p>
+  </section>
+
+  <section>
+    <h2>XVII &middot; The instrument</h2>
+
+    <div class="prop">
+      <div class="prop-num">16.0</div>
+      <p class="prop-body">
+        XV gave the real. XVI gave work and the twelve houses.
+        But work in any house &mdash; Opus designing software, Ars
+        composing music, Vinculum holding a hard conversation,
+        Animus tending the wound &mdash; requires more than
+        <span class="var">&alpha;<sub>i</sub></span> pointing at
+        the world. It requires
+        <span class="var">&Sscr;<sub>i</sub></span> doing real
+        internal work: planning, visualizing, modelling, reasoning,
+        predicting consequences, holding structure. The simulation
+        that has been described as the problem is also the most
+        powerful instrument <span class="var">i</span> contains.
+        The final move of the document is to <em>recruit</em> it.
+      </p>
+    </div>
+
+    <div class="def">
+      <span class="def-label">Definition 21</span>
+      Let <em>the instrument</em> denote
+      <span class="var">&Sscr;<sub>i</sub></span> in the relation
+      where <span class="var">&alpha;<sub>i</sub></span> directs it
+      from the real, in service of work. Not a new architectural
+      component &mdash; the same
+      <span class="var">&Sscr;<sub>i</sub></span> as in X and XI
+      &mdash; in a categorically different relation to
+      <span class="var">i</span>.
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">16.1</div>
+      <p class="prop-body">
+        <em>The flip.</em> The same machinery operates in two
+        regimes, distinguished by which way the directional arrow
+        between <span class="var">&alpha;<sub>i</sub></span> and
+        <span class="var">&Sscr;<sub>i</sub></span> points.
+      </p>
+      <p class="prop-body">
+        <strong>Master mode.</strong> The default.
+      </p>
+      $$\\mathcal{S}_i \\;\\longrightarrow\\; \\alpha_i$$
+      <p class="prop-body">
+        Simulation runs autonomously, content is
+        <span class="var">&xi;<sub>i</sub></span>-tuned, attention
+        is captured, <span class="var">i</span> inhabits the
+        simulation as if it were <span class="var">w</span>.
+      </p>
+      <p class="prop-body">
+        <strong>Instrument mode.</strong> The trained condition.
+      </p>
+      $$\\alpha_i \\;\\longrightarrow\\; \\mathcal{S}_i$$
+      <p class="prop-body">
+        Attention directs, simulation runs in service, content is
+        chosen, <span class="var">i</span> wields the simulation
+        as a tool. The arrow flips. That is what changes. The
+        machinery is identical; the relation is opposite.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">16.2</div>
+      <p class="prop-body">
+        <em>Both branches recruited.</em> The two components of
+        <span class="var">&Sscr;<sub>i</sub></span> named in XI
+        &mdash; endogenous percepts
+        <span class="var">&Pscr;<sub>i</sub></span> and abstract
+        operations <span class="var">&Ascr;<sub>i</sub></span>
+        &mdash; both become available as instruments.
+      </p>
+      <p class="prop-body">
+        <span class="var">&Pscr;<sub>i</sub></span> <strong>recruited</strong>
+        is deliberate visualization, rehearsal, mental imagery.
+        Seeing a structure before building it. Hearing a phrase
+        before playing it. Feeling a difficult conversation before
+        having it. The same perceptual machinery
+        <span class="var">&xi;<sub>i</sub></span> uses for
+        rumination, redirected by
+        <span class="var">&alpha;<sub>i</sub></span> toward
+        chosen content.
+      </p>
+      <p class="prop-body">
+        <span class="var">&Ascr;<sub>i</sub></span> <strong>recruited</strong>
+        is deliberate reasoning, planning, derivation,
+        model-building. Thinking through a problem. Planning a
+        week. Deriving a structure. Composing a system. The same
+        multiple-demand network whose metabolic cost was named in
+        13.1, now spent on chosen ends rather than captured ones.
+      </p>
+      <p class="prop-body">
+        Both serve. Both available. The same components that were
+        running <span class="var">i</span> can now be running for
+        <span class="var">i</span>.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">16.3</div>
+      <p class="prop-body">
+        <em>The condition.</em> Recruitment requires the real. The
+        flipped arrow holds only above
+        <span class="var">c<sub>i</sub></span>&rsquo;s threshold.
+      </p>
+      $$c_i \\;\\geq\\; c_i^{\\,*} \\;\\;\\Longrightarrow\\;\\; \\text{instrument mode available}$$
+      <p class="prop-body">
+        Below threshold, what looks like recruitment is
+        <span class="var">&xi;<sub>i</sub></span>-driven activity
+        wearing the clothes of work. The &ldquo;planning&rdquo; is
+        catastrophizing. The &ldquo;visualization&rdquo; is
+        worst-case rehearsal. The very thought <em>I am using my
+        simulation as a tool</em> is, from inside capture, just
+        more <span class="var">&Sscr;<sub>i</sub></span>-content
+        generated by <span class="var">&Sscr;<sub>i</sub></span>.
+      </p>
+      <p class="prop-body">
+        The way to know instrument mode is actually available, and
+        not capture-pretending, is the signatures of 14.3:
+        vividness, beauty in ordinary things, somatic well-being,
+        the cool of not-pulled. Without those,
+        <span class="var">c<sub>i</sub></span> is below threshold
+        and the instrument is fiction. Tend the body, return to
+        the doorway, raise <span class="var">c<sub>i</sub></span>,
+        and then begin.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">16.4</div>
+      <p class="prop-body">
+        <em>Hijack and watchdog.</em> Even from the real, the
+        instrument is contaminable.
+        <span class="var">&xi;<sub>i</sub></span> can leak into a
+        recruited <span class="var">&Sscr;<sub>i</sub></span>
+        over time.
+      </p>
+      <p class="prop-body">
+        The hijack is gradual. The &ldquo;planning&rdquo; slides
+        into anxious catastrophizing. The
+        &ldquo;visualization&rdquo; slides into worst-case
+        rehearsal. The &ldquo;thinking through&rdquo; slides into
+        rumination wearing the clothes of work. None of this
+        announces itself; the instrument that was clean five
+        minutes ago is now contaminated, and
+        <span class="var">i</span> has not noticed, because
+        <span class="var">&Sscr;<sub>i</sub></span> is
+        continuously generating <em>this is just planning</em> as
+        part of the simulation.
+      </p>
+      <p class="prop-body">
+        <strong>The solution: periodic return to the doorway.</strong>
+        While the instrument runs,
+        <span class="var">&alpha;<sub>i</sub></span> stays partly
+        tethered to <span class="var">&sigma;<sub>i</sub></span>
+        &mdash; to the body, the breath, the surroundings.
+      </p>
+      $$\\alpha_i \\;\\to\\; \\sigma_i \\;\\;\\text{pulse} \\;\\;\\to\\;\\; \\alpha_i \\;\\to\\; \\mathcal{S}_i$$
+      <p class="prop-body">
+        Drift, return. Drift, return. The body-anchor is the
+        watchdog: when the &ldquo;planning&rdquo; has slid into
+        worry, the return reveals it. Raise
+        <span class="var">c<sub>i</sub></span> again from the
+        doorway; resume the instrument from a re-cleaned channel.
+        The pulse is non-optional; an instrument run without it,
+        for long enough, will be contaminated whether
+        <span class="var">i</span> notices or not.
+      </p>
+      <p class="prop-body">
+        The portfolio dispersion of 15.5 reinforces this. If one
+        house&rsquo;s instrument has been hijacked &mdash; Opus
+        slipping from designing into anxious self-evaluation, say
+        &mdash; redirecting <span class="var">&alpha;<sub>i</sub></span>
+        to another house breaks the chain before saturation
+        consolidates. The twelve houses are also twelve fresh
+        starts.
+      </p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-num">16.5</div>
+      <p class="prop-body">
+        <em>The architecture, complete.</em> The arc the document
+        has been building toward closes here.
+      </p>
+      <p class="prop-body">
+        XIV: <span class="var">&alpha;<sub>i</sub></span> &mdash;
+        the lever <span class="var">i</span> has.
+      </p>
+      <p class="prop-body">
+        XV: the real &mdash; the standing-place from which the
+        lever is wielded clean.
+      </p>
+      <p class="prop-body">
+        XVI: work &mdash; what <span class="var">i</span> does
+        from that standing-place, across the twelve houses, with
+        the Hinkie discipline.
+      </p>
+      <p class="prop-body">
+        XVII: the instrument &mdash;
+        <span class="var">&Sscr;<sub>i</sub></span> recruited to
+        serve the work, directed by
+        <span class="var">&alpha;<sub>i</sub></span> from the
+        real, watched by the doorway.
+      </p>
+      <p class="prop-body">
+        Earlier sections named the architecture as it is:
+        <span class="var">w</span>, <span class="var">i</span>,
+        time, change, entropy, boundary, sensation, simulation,
+        the contents of the simulation, the world within, the
+        wound. The four foothold sections (XIV&ndash;XVII) name
+        what <span class="var">i</span> can do with the
+        architecture as it is. Together: a map of the territory and
+        the moves available from inside it.
+      </p>
+      <p class="prop-body">
+        The map does not make the work easy. It makes the work
+        <em>intelligible</em>. <span class="var">i</span> still has
+        to live this, every day, in the body
+        <span class="var">i</span> has, in the
+        <span class="var">w</span> that
+        <span class="var">i</span> is in. The wound calcifies and
+        grows by default (12.7); the counter-loop
+        (14.4) is also available;
+        <span class="var">&xi;<sub>i</sub></span> wins by saturation,
+        the houses defeat saturation by dispersion; the body is the
+        substrate every move runs on, and where every move fails
+        first. None of this is news to a body that has been doing
+        the work. What the document offers is the naming:
+        intentional life as an architecture
+        <span class="var">i</span> can see, and from seeing, act
+        on.
+      </p>
+    </div>
+
+    <p class="aside">
+      The body version. The instrument runs on body capacity.
+      Recruited <span class="var">&Sscr;<sub>i</sub></span> costs
+      metabolic substrate &mdash; sustained prefrontal activity,
+      glucose, regulated autonomic state, recovery. A depleted body
+      cannot wield a clean instrument; the recruit becomes hijack
+      faster, the doorway becomes harder to reach, the signatures
+      of the real do not arrive. Sleep, nutrition, movement,
+      autonomic regulation, contact with regulated others &mdash;
+      the body version of every section now compounds. The
+      complete architecture cannot be operated by a depleted body.
+      The body is where the architecture is operated, and where it
+      fails first.
+    </p>
+
+    <p class="aside">
+      Closing. <span class="var">w</span> is unbounded;
+      <span class="var">i</span> is finite; the map is shorter
+      than the territory and necessarily so. Every section here
+      can be deepened, every variable can be refined, every
+      proposition can be tested against a particular life and
+      found wanting in detail while holding in shape. The work of
+      iterating this document is itself one of the moves it names
+      &mdash; Studium, applied to its own surface. To be continued,
+      in that sense, indefinitely.
     </p>
   </section>
 

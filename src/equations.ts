@@ -1630,6 +1630,435 @@ $$k_B \\;\\approx\\; 1.381 \\times 10^{-23} \\;\\text{J/K}$$
         "$\\alpha_i$ is a capacity belonging to $i$ as a whole, not a smaller agent inside $i$. The only degree of freedom $i$ has, and the foothold every later move in the document depends on. Finite, directable, captureable, trainable.",
     },
   },
+  "channel-clarity": {
+    id: "channel-clarity",
+    tex: "c_i \\;\\in\\; [0, 1]",
+    tooltip: {
+      pronunciation:
+        "c sub i is in the closed interval from zero to one",
+      symbols:
+        "$c_i$ is channel clarity &mdash; the magnitude of $\\alpha_i$&rsquo;s penetration through $\\mathcal{S}_i$ toward $\\sigma_i$ on a normalized scale; $[0, 1]$ is the closed unit interval.",
+      context:
+        "$c_i = 0$ is full capture by $\\mathcal{S}_i$ &mdash; the deep imaginal. $c_i \\to 1$ is the asymptote of pure contact with $w$ via $\\sigma_i$ &mdash; never reached, always approached. Every $i$ lives somewhere on this axis at every moment.",
+    },
+  },
+  "real-asymptote": {
+    id: "real-asymptote",
+    tex: "c_i \\;<\\; 1 \\quad \\forall\\, t",
+    tooltip: {
+      pronunciation:
+        "c sub i is strictly less than one for all t",
+      symbols:
+        "$c_i$ is channel clarity; $\\forall\\, t$ means &ldquo;for all times.&rdquo; The strict inequality says clarity never reaches one.",
+      context:
+        "Pure unmediated contact with $w$ is unreachable. The sensorium narrows reality to a sliver, construction is unavoidable, and $\\hat{w}_i$&rsquo;s priors always shape what gets through. The real is an asymptote &mdash; a direction, not an arrival.",
+    },
+  },
+  "real-doorway": {
+    id: "real-doorway",
+    tex: "\\alpha_i \\;\\longrightarrow\\; \\sigma_i \\;\\;\\Longrightarrow\\;\\; \\frac{dc_i}{dt} \\;>\\; 0",
+    tooltip: {
+      pronunciation:
+        "alpha sub i directed at sigma sub i implies d c sub i by d t is positive",
+      symbols:
+        "$\\alpha_i \\to \\sigma_i$ means the beam is directed at the sensorium; $\\Longrightarrow$ is logical implication; $\\frac{dc_i}{dt} > 0$ means channel clarity is rising in time.",
+      context:
+        "The body is the doorway. Directing $\\alpha_i$ at any sensory anchor &mdash; breath, weight, sound, fingers on keys &mdash; raises channel clarity. The simulation is theme-shaped and abstract; the body is local and surface. When $\\alpha_i$ finds the surface, the channel cracks.",
+    },
+  },
+  "real-threshold": {
+    id: "real-threshold",
+    tex: "c_i \\;\\geq\\; c_i^{\\,*} \\;\\;\\Longrightarrow\\;\\; \\text{signatures}_i",
+    tooltip: {
+      pronunciation:
+        "c sub i greater than or equal to c sub i star implies signatures sub i",
+      symbols:
+        "$c_i$ is channel clarity; $c_i^{*}$ is the threshold above which experiential markers of the real arrive; $\\Longrightarrow$ is logical implication; $\\text{signatures}_i$ names the cluster of phenomena (vividness, beauty, well-being, the cool of not-pulled).",
+      context:
+        "Channel clarity is continuous, but the experiential signatures of the real do not arrive gradually &mdash; they kick in around some threshold. Below it, $i$ is still working at it. Above it, the state has its own coherence. The signatures are empirical markers, not metaphysical claims &mdash; what people consistently report when $c_i$ crosses over.",
+    },
+  },
+  "real-counter-loop": {
+    id: "real-counter-loop",
+    tex: "\\alpha_i \\;\\to\\; \\sigma_i \\;\\to\\; \\text{body}_i^{\\,\\text{regulated}} \\;\\to\\; c_i^{\\,\\uparrow} \\;\\to\\; \\mathcal{S}_i^{\\,\\downarrow} \\;\\to\\; \\alpha_i^{\\,\\text{free}} \\;\\to\\; \\ldots",
+    tooltip: {
+      pronunciation:
+        "alpha sub i to sigma sub i to regulated body to c sub i rising to S-script sub i falling to alpha sub i free, and so on",
+      symbols:
+        "Each arrow marks the next step in a virtuous cycle. Superscript arrows ($\\uparrow$, $\\downarrow$) mark increase or decrease; $\\text{body}_i^{\\,\\text{regulated}}$ is the body in a more ventral autonomic configuration; $\\alpha_i^{\\,\\text{free}}$ is attention not under capture.",
+      context:
+        "The reverse of the wound&rsquo;s vicious cycle from 12.7. Attention on the body regulates the autonomic configuration; the regulated body raises channel clarity; rising clarity thins the simulation; the thinner simulation frees more attention from capture. Each lap makes the next easier. Practiced often enough, recovery becomes faster than degradation.",
+    },
+  },
+  "instrument-master-mode": {
+    id: "instrument-master-mode",
+    tex: "\\mathcal{S}_i \\;\\longrightarrow\\; \\alpha_i",
+    tooltip: {
+      pronunciation:
+        "S-script sub i directed at alpha sub i",
+      symbols:
+        "$\\mathcal{S}_i$ is the running simulation; $\\alpha_i$ is the beam of attention; the arrow marks the direction of influence &mdash; simulation pulling attention.",
+      context:
+        "Master mode &mdash; the default. The simulation runs autonomously and captures $\\alpha_i$, often via $\\xi_i$&rsquo;s themes. Content is wound-tuned; $i$ inhabits the simulation as if it were $w$. This is the regime described from XII through XV before recruitment becomes possible.",
+    },
+  },
+  "instrument-recruited-mode": {
+    id: "instrument-recruited-mode",
+    tex: "\\alpha_i \\;\\longrightarrow\\; \\mathcal{S}_i",
+    tooltip: {
+      pronunciation:
+        "alpha sub i directed at S-script sub i",
+      symbols:
+        "$\\alpha_i$ is the beam of attention; $\\mathcal{S}_i$ is the simulation; the arrow marks the reversed direction of influence &mdash; attention directing simulation.",
+      context:
+        "Instrument mode. The trained condition: $\\alpha_i$ from the real directs $\\mathcal{S}_i$ toward chosen work. $\\mathcal{P}_i$ recruited for deliberate visualization; $\\mathcal{A}_i$ recruited for deliberate reasoning. Same machinery as master mode, opposite relation to $i$. The flipped arrow is what changes.",
+    },
+  },
+  "instrument-condition": {
+    id: "instrument-condition",
+    tex: "c_i \\;\\geq\\; c_i^{\\,*} \\;\\;\\Longrightarrow\\;\\; \\text{instrument mode available}",
+    tooltip: {
+      pronunciation:
+        "c sub i greater than or equal to c sub i star implies instrument mode is available",
+      symbols:
+        "$c_i$ is channel clarity from XV; $c_i^{*}$ is the threshold for the signatures of the real; $\\Longrightarrow$ is logical implication.",
+      context:
+        "Recruitment requires the real. Below threshold, what looks like instrument mode is $\\xi_i$-driven activity wearing the clothes of work &mdash; planning that is catastrophizing, visualization that is worst-case rehearsal. Above threshold, the flipped arrow holds and the simulation can be wielded as tool. The signatures (vividness, beauty, well-being, the cool of not-pulled) are the empirical test that threshold has been crossed.",
+    },
+  },
+  "instrument-pulse": {
+    id: "instrument-pulse",
+    tex: "\\alpha_i \\;\\to\\; \\sigma_i \\;\\;\\text{pulse} \\;\\;\\to\\;\\; \\alpha_i \\;\\to\\; \\mathcal{S}_i",
+    tooltip: {
+      pronunciation:
+        "alpha sub i to sigma sub i, pulse, then alpha sub i back to S-script sub i",
+      symbols:
+        "$\\alpha_i \\to \\sigma_i$ is attention returned to the doorway; <em>pulse</em> marks a discrete return to the body-anchor; $\\alpha_i \\to \\mathcal{S}_i$ is resumption of instrument mode from re-cleaned channel.",
+      context:
+        "The hijack defence. While the instrument runs, $\\alpha_i$ stays partly tethered to $\\sigma_i$ &mdash; body, breath, surroundings. Drift, return. Drift, return. The body-anchor catches $\\xi_i$-takeover before it consolidates. When the &ldquo;planning&rdquo; has slid into worry, the return reveals it; raise $c_i$ again, then resume. Non-optional &mdash; an instrument run without periodic anchoring will, given time, be hijacked whether $i$ notices or not.",
+    },
+  },
+  "wound-saturation": {
+    id: "wound-saturation",
+    detail: {
+      title: "The wound's saturation strategy",
+      html: `
+<p class="lead">
+  $\\xi_i$ does not win by being big. It wins by being
+  <em>concentrated</em>. The wound has a small set of recurring
+  themes, returns to them with extreme reliability, and uses this
+  narrowness as a weapon against $\\alpha_i$. Understanding the
+  mechanism is what makes the Hinkie counter-strategy
+  intelligible.
+</p>
+
+<h3>The two halves of the claim</h3>
+
+<p>
+  <em>Saturating $\\alpha_i$.</em> Filling the beam. From XIV:
+  $\\alpha_i$ is finite, one-at-a-time, and energetic to hold
+  against a pull. If something captures it for the full duration
+  of a moment, no other content is being attended. The captured
+  target gets 100% of the available beam.
+</p>
+
+<p>
+  <em>Concentration on a small number of obsessions.</em> The
+  wound does not spread itself across all twelve houses or all of
+  $w$. It has a small repertoire of <em>themes</em>, and it
+  returns to them with extreme reliability.
+</p>
+
+<h3>What the themes are</h3>
+
+<p>
+  Every $\\xi_i$ has specific content &mdash; laid down by
+  12.2&rsquo;s three streams (direct harm, attributes of $w$,
+  inheritance) and calcified by 12.3&rsquo;s five mechanisms
+  (sensitization, avoidance, somatic encoding, narrative
+  consolidation, stickiness). The content is <em>thematic</em>,
+  not random.
+</p>
+
+<p>
+  For one $i$, the themes might be:
+</p>
+
+<dl>
+  <dt><em>I am unlovable.</em></dt>
+  <dd>Belief about how others will see and treat $i$.</dd>
+  <dt><em>They will leave.</em></dt>
+  <dd>Prediction about every intimate bond.</dd>
+  <dt><em>I will be exposed as defective.</em></dt>
+  <dd>Fear that any close inspection reveals what is broken.</dd>
+</dl>
+
+<p>
+  For another $i$, the themes might be entirely different:
+  <em>I am inferior. I missed my chance. I am too late.</em>
+  Three to five recurring themes is typical. They <em>interlock</em>
+  &mdash; abandonment hooked to defectiveness hooked to inferiority
+  &mdash; forming a small ecosystem that pulls $\\alpha_i$ in
+  regardless of where it started.
+</p>
+
+<h3>Why narrowness is the weapon, not weakness</h3>
+
+<p>
+  Imagine a diffuse $\\xi_i$ that worried equally about everything
+  in $w$ &mdash; generic low-amplitude anxiety across all subjects.
+  Such a wound would be <em>weak</em>: each theme would compete
+  with every other for $\\alpha_i$, none would reach the amplitude
+  needed for autonomic activation, and the body would never enter
+  the sympathetic or dorsal patterns that lock the loop in place.
+  The whole structure would dissolve into noise.
+</p>
+
+<p>
+  The actual $\\xi_i$ is the opposite. A small set of
+  <em>high-amplitude attractors</em> &mdash; themes deeply grooved,
+  dependably activated, emotionally saturating when they fire.
+  Concentration gives them the amplitude that thresholded systems
+  (the
+  <a class="eq-ref" data-eq="autonomic-configuration">autonomic
+  body</a>, the simulation, attention) require to engage at full
+  intensity.
+</p>
+
+<p class="callout">
+  The narrowness is the efficiency. Concentrated force on a narrow
+  front, deeply familiar terrain, repeatedly engaged. This is how
+  small adversaries defeat much larger systems &mdash; not by
+  matching surface area, but by concentrating force where the
+  defender cannot match it.
+</p>
+
+<h3>How this attacks $\\alpha_i$ specifically</h3>
+
+<p>
+  Between intentional deployments &mdash; between sentences,
+  between tasks, in any pause &mdash; $\\alpha_i$ does not stay
+  neutral. The default is capture by the loudest content available
+  (13.2). For an $i$ with significant $\\xi_i$, the loudest
+  available content is always one of the wound&rsquo;s themes.
+</p>
+
+<p>
+  The themes function as <em>high-gravity attractors</em> in the
+  field of attention: any $\\alpha_i$ that drifts near them is
+  pulled in. Once captured, $\\alpha_i$ sustains the theme. The
+  body responds physiologically. The simulation generates more
+  wound-tuned content. The capture deepens. Every minute
+  $\\alpha_i$ spends on a theme deepens the groove and makes the
+  next capture more likely.
+</p>
+
+<p>
+  <strong>The saturation is not a single moment of dominance but
+  the cumulative monopoly of $\\alpha_i$ over hours, days, years.</strong>
+</p>
+
+<p>
+  Rumination is the visible form. The endless replay of the same
+  conversation, the same regret, the same fear. The repetitiveness
+  is not a bug; it is the saturation strategy at work.
+</p>
+
+<h3>The counter-strategy: dispersion</h3>
+
+<p>
+  If concentration is the wound&rsquo;s weapon, dispersion is the
+  defence. Distribute $\\alpha_i$ across the twelve houses, and the
+  calculus changes.
+</p>
+
+<dl>
+  <dt>$\\alpha_i$ has twelve surfaces to land on between deployments.</dt>
+  <dd>
+    The wound&rsquo;s themes are no longer the only available
+    attractors; they compete with eleven other terrains.
+  </dd>
+  <dt>The themes do not disappear, but they lose their monopoly.</dt>
+  <dd>
+    Still present, still occasionally activating, but no longer the
+    gravitational centre of attention.
+  </dd>
+  <dt>Capture chains can be broken before saturation completes.</dt>
+  <dd>
+    When capture happens, redirecting $\\alpha_i$ to another house
+    interrupts the rumination cycle before the cumulative monopoly
+    consolidates.
+  </dd>
+  <dt>Each house becomes an anti-attractor.</dt>
+  <dd>
+    A place the wound has not colonized, where $\\alpha_i$ can go
+    and stay productive without being pulled back.
+  </dd>
+</dl>
+
+<p>
+  Same logic as guerrilla warfare against a concentrated army. A
+  single battle on the army&rsquo;s chosen ground is a loss. But
+  twelve dispersed terrains, each defended by activity that is not
+  the wound, deny the army its single decisive engagement.
+  $\\xi_i$ wants $i$ concentrated on its narrow front. The houses
+  build twelve fronts of $i$&rsquo;s own, on terrain the wound has
+  not prepared.
+</p>
+
+<h3>Why &ldquo;just stop thinking about it&rdquo; fails</h3>
+
+<p>
+  The folk advice (also some clinical advice) is: when the
+  wound&rsquo;s themes activate, just <em>stop</em> attending to
+  them. Redirect. Don&rsquo;t engage.
+</p>
+
+<p>
+  This fails for a precise reason. You cannot will $\\alpha_i$ off
+  the wound&rsquo;s themes <em>while $\\alpha_i$ is already
+  captured by them</em> &mdash; that is what capture <em>means</em>.
+  The very faculty that would do the redirecting is the faculty
+  currently saturated. Telling someone in capture to redirect is
+  like telling someone drowning to swim.
+</p>
+
+<p>
+  The intervention has to be <em>structural</em>: change what
+  surfaces are available for $\\alpha_i$ to land on, ahead of
+  time. Build the twelve houses, tend their thresholds, sustain
+  the practices that strengthen $\\alpha_i$ at the body level.
+  Then, when capture happens, the redirect has somewhere to go.
+  The themes do not vanish; they become one terrain among twelve
+  instead of the only terrain.
+</p>
+
+<p class="callout">
+  The architectural insight: do not fight the wound on its terms.
+  Build the life it has to operate inside. Let the life crowd it
+  out.
+</p>
+
+<p class="aside-detail">
+  This page operationalizes three claims from earlier sections:
+  12.7 (the wound&rsquo;s self-accelerating loop), 13.2 (default
+  capture of $\\alpha_i$), and 15.5 (the Hinkie stance). What all
+  three share is the recognition that $\\xi_i$ is an adversary
+  with a strategy, not a background condition. Understanding the
+  strategy is what makes defence intelligible.
+</p>
+`,
+    },
+  },
+
+  "work-two-levels": {
+    id: "work-two-levels",
+    tex: "\\alpha_i \\;=\\; 0 \\;\\;\\not\\Rightarrow\\;\\; \\text{work}_i \\;=\\; 0",
+    tooltip: {
+      pronunciation:
+        "alpha sub i equals zero does not imply work sub i equals zero",
+      symbols:
+        "$\\alpha_i = 0$ means the beam of attention is at rest (no intentional deployment); $\\not\\Rightarrow$ is &ldquo;does not imply&rdquo;; $\\text{work}_i = 0$ would mean all work has ceased.",
+      context:
+        "There are two levels of work: intentional ($\\alpha_i$-driven) and autonomic (body-driven). When intentional work goes to zero, body work continues at full intensity. Heart, kidneys, immune system, cellular repair, memory consolidation, hormonal regulation &mdash; all continuous while alive. Rest is not absence of work but prioritization of body work over intentional work. Sleep is the most demanding work the body does.",
+    },
+  },
+  "houses-set": {
+    id: "houses-set",
+    tex: "\\mathcal{H} \\;=\\; \\{\\,\\mathcal{H}_{\\mathrm{I}},\\; \\mathcal{H}_{\\mathrm{II}},\\; \\ldots,\\; \\mathcal{H}_{\\mathrm{XII}}\\,\\}",
+    tooltip: {
+      pronunciation:
+        "H-script equals the set containing H-script sub one through H-script sub twelve",
+      symbols:
+        "$\\mathcal{H}$ is the set of all work-houses; $\\mathcal{H}_k$ is the $k$-th house for $k$ running over the Roman numerals I through XII.",
+      context:
+        "Twelve houses, named in Latin: Corpus, Animus, Tempus, Domus, Patrimonium, Opus, Ars, Studium, Vinculum, Polis, Naturum, Ludus. Each is a domain of work-activity defined by its scope; together they exhaust what a human has to do well to flourish.",
+    },
+  },
+  "alpha-in-house": {
+    id: "alpha-in-house",
+    tex: "\\alpha_i(t) \\;\\in\\; \\mathcal{H}_k \\;\\;\\text{for some unique } k",
+    tooltip: {
+      pronunciation:
+        "alpha sub i of t is in H-script sub k for some unique k",
+      symbols:
+        "$\\alpha_i(t)$ is the beam of attention at time $t$; $\\mathcal{H}_k$ is the $k$-th house; the &ldquo;some unique $k$&rdquo; clause enforces the one-at-a-time constraint.",
+      context:
+        "At any moment, $\\alpha_i$ is deployed to exactly one house. Attention cannot be split across houses simultaneously; allocation across houses is a temporal phenomenon, not a parallel one. Over time, the deployment pattern forms an allocation profile $\\mu_i$.",
+    },
+  },
+  "allocation-profile": {
+    id: "allocation-profile",
+    tex: "\\mu_i: \\mathcal{H} \\to [0, 1], \\quad \\sum_{k=\\mathrm{I}}^{\\mathrm{XII}} \\mu_i(\\mathcal{H}_k) \\;=\\; 1",
+    tooltip: {
+      pronunciation:
+        "mu sub i is a function from H-script to the closed unit interval, with the sum over k from I to XII of mu sub i of H-script sub k equal to one",
+      symbols:
+        "$\\mu_i$ is $i$&rsquo;s allocation profile &mdash; the fraction of $\\alpha_i$ deployed to each house over a time window; the sum-to-one constraint says all the attention $i$ has goes somewhere among the twelve.",
+      context:
+        "$\\mu_i$ is a probability distribution over the houses. The shape of a life is the shape of its $\\mu_i$. Different $i$&rsquo;s have radically different profiles; the same $i$ at different life stages has different profiles. The profile is the first place neglect shows: a house at near-zero is in slow collapse.",
+    },
+  },
+  "maintenance-threshold": {
+    id: "maintenance-threshold",
+    tex: "\\mu_i(\\mathcal{H}_k) \\;\\geq\\; m_k",
+    tooltip: {
+      pronunciation:
+        "mu sub i of H-script sub k is greater than or equal to m sub k",
+      symbols:
+        "$\\mu_i(\\mathcal{H}_k)$ is the allocation to house $k$; $m_k$ is house $k$&rsquo;s maintenance threshold &mdash; the floor below which the house begins to degrade.",
+      context:
+        "Each house has a non-zero minimum allocation it needs to avoid decay. Sleep too little, the body breaks. Skip relationship maintenance, the bonds wither. The thresholds are real and house-specific. The houses are also coupled: decay in one bleeds into the others, so below threshold in one becomes, in time, below threshold in all.",
+    },
+  },
+  "hinkie-stance": {
+    id: "hinkie-stance",
+    tex: "\\mu_i(\\mathcal{H}_k) \\;>\\; 0 \\quad \\forall\\, k",
+    tooltip: {
+      pronunciation:
+        "mu sub i of H-script sub k is strictly greater than zero for all k",
+      symbols:
+        "$\\mu_i(\\mathcal{H}_k)$ is the allocation to house $k$; $>0$ is strict positivity; $\\forall\\, k$ means &ldquo;for every house.&rdquo;",
+      context:
+        "The Hinkie stance: don&rsquo;t optimize any single house; don&rsquo;t neglect any. Marginal compounding gains across twelve dimensions outperform heroic gains in one, because the latter typically come at the cost of another house&rsquo;s threshold. Also an anti-$\\xi_i$ strategy &mdash; the wound wins by concentration, so distributing $\\alpha_i$ across twelve fronts denies it the saturation it needs.",
+    },
+  },
+  "flourishing-function": {
+    id: "flourishing-function",
+    tex: "F: \\mu_i \\;\\mapsto\\; \\mathbb{R}_{\\geq 0}",
+    tooltip: {
+      pronunciation:
+        "F maps mu sub i to the non-negative reals",
+      symbols:
+        "$F$ is the flourishing function; $\\mu_i$ is $i$&rsquo;s allocation profile; $\\mathbb{R}_{\\geq 0}$ is the set of non-negative real numbers.",
+      context:
+        "Flourishing is a function of the allocation profile, not of any single house. Two properties characterize it: threshold collapse (any house below $m_k$ sends $F$ toward zero) and diminishing returns above threshold (additional allocation past $m_k$ helps less and less). Two consequences follow: flourishing is bounded above by the weakest house, and the work is portfolio work rather than specialist work.",
+    },
+  },
+  "threshold-collapse": {
+    id: "threshold-collapse",
+    tex: "\\exists\\, k : \\mu_i(\\mathcal{H}_k) < m_k \\;\\;\\Longrightarrow\\;\\; F(\\mu_i) \\to 0",
+    tooltip: {
+      pronunciation:
+        "there exists a k such that mu sub i of H-script sub k is less than m sub k implies F of mu sub i goes to zero",
+      symbols:
+        "$\\exists\\, k$ is &ldquo;there exists some house $k$&rdquo;; $\\mu_i(\\mathcal{H}_k) < m_k$ is &ldquo;allocation to that house falls below threshold&rdquo;; $\\Longrightarrow$ is logical implication; $F(\\mu_i) \\to 0$ is &ldquo;flourishing collapses to zero.&rdquo;",
+      context:
+        "If any single house falls below its maintenance threshold, flourishing collapses regardless of how strong the other houses are. Flourishing is not an average across houses; it is closer to a product, and any single zero zeroes it out. This is the architectural backing for the Hinkie stance: tend all twelve, because losing any one of them takes down the whole.",
+    },
+  },
+  "simulation-proper-subset": {
+    id: "simulation-proper-subset",
+    tex: "\\mathcal{S}_i \\;\\subsetneq\\; i",
+    tooltip: {
+      pronunciation:
+        "S-script sub i is a proper subset of i",
+      symbols:
+        "$\\mathcal{S}_i$ is the running simulation; $i$ is the questioner&rsquo;s worldline; $\\subsetneq$ is proper inclusion &mdash; $\\mathcal{S}_i$ is strictly smaller than $i$.",
+      context:
+        "The architectural fact behind the stance. The simulation is a proper part of $i$, not all of $i$. When $\\alpha_i$ illuminates $\\mathcal{S}_i$, what holds the illumination is what is left of $i$ after $\\mathcal{S}_i$ has been set aside as an object. This is what makes &ldquo;yeah, there it is&rdquo; possible &mdash; the simulation is a thing $i$ has, not what $i$ is.",
+    },
+  },
   "attention-contest": {
     id: "attention-contest",
     tex: "\\alpha_i \\;\\rightleftarrows\\; \\mathcal{S}_i",
