@@ -96,7 +96,9 @@ p {
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.78rem;
   color: var(--ink-soft);
-  padding-top: 0.45rem;
+  /* Nudge the monospace number up so its cap height sits level with
+     the serif body text's first line, rather than dropping below it. */
+  padding-top: 0.28rem;
   letter-spacing: 0.04em;
 }
 
