@@ -98,7 +98,7 @@ p {
   color: var(--ink-soft);
   /* Nudge the monospace number so its cap height sits level with the
      serif body text's first line. */
-  padding-top: 0.23rem;
+  padding-top: 0.24rem;
   letter-spacing: 0.04em;
 }
 
